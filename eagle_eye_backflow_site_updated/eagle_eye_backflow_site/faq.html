@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ – Eagle Eye Backflow</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="call-bar">
+        Call or Text: <a href="tel:6043515765" style="color: var(--white); text-decoration: underline;">604‑351‑5765</a>
+    </div>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/logo.png" alt="Company logo">
+                Eagle&nbsp;Eye&nbsp;Backflow
+            </div>
+            <div class="menu-toggle" onclick="toggleNav()">☰</div>
+            <ul id="nav-list">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#service-area">Service&nbsp;Area</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq">
+            <h3>What happens if I don’t get a backflow test done when required?</h3>
+            <p>Municipal bylaws require annual backflow testing. Failure to do so can result in fines ranging from $250 to $10,000 per day and, in extreme cases, the city may cut off your water service.</p>
+
+            <h3>What is backflow?</h3>
+            <p>Backflow is the undesirable reversal of water (or other liquids, gases or solids) into the potable water supply. It is caused by back pressure or back siphonage.</p>
+
+            <h3>What is a backflow assembly?</h3>
+            <p>A backflow assembly is an assembled unit designed to prevent backflow from entering the water system. It includes shutoff valves and test cocks.</p>
+
+            <h3>Where are backflow assemblies located?</h3>
+            <p>Backflow assemblies can be installed on irrigation systems, indoor and outdoor sprinkler systems, water filters, boilers, fountains, ponds and other plumbing systems.</p>
+
+            <h3>Who is qualified to test backflow assemblies?</h3>
+            <p>The city requires that testing be done by a Certified Backflow Assembly Tester whose qualifications have been verified by the city’s agent, BSI.</p>
+
+            <h3>What is a Certified Backflow Assembly Tester?</h3>
+            <p>A Certified Backflow Assembly Tester is an individual who has received formal training in backflow testing, has been certified by the BC Water and Waste Association (BCWWA) and renews their certification annually.</p>
+        </div>
+    </section>
+    <section>
+        <h2>Have other questions?</h2>
+        <p>If you didn’t find the answer you were looking for, feel free to get in touch. We’re always happy to help.</p>
+        <p><strong>Email:</strong> <a href="mailto:eagle.eye.backflow@gmail.com">eagle.eye.backflow@gmail.com</a></p>
+        <p><strong>Phone:</strong> <a href="tel:6043515765">604‑351‑5765</a></p>
+    </section>
+    <footer>
+        &copy; 2025 Eagle Eye Backflow. All rights reserved.
+    </footer>
+    <script>
+        function toggleNav() {
+            var navList = document.getElementById('nav-list');
+            if (navList.style.display === 'flex') {
+                navList.style.display = 'none';
+            } else {
+                navList.style.display = 'flex';
+                navList.style.flexDirection = 'column';
+                navList.style.background = 'var(--white)';
+                navList.style.position = 'absolute';
+                navList.style.top = '100%';
+                navList.style.right = '0';
+                navList.style.padding = '1rem';
+                navList.style.boxShadow = '0 2px 4px rgba(0,0,0,0.1)';
+            }
+        }
+    </script>
+</body>
+</html>
