@@ -5,7 +5,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eagle Eye Backflow – Greater Vancouver Backflow Testing &amp; Repair</title>
+    <meta name="description" content="Certified backflow testing and repair across Metro Vancouver. Licensed, insured technicians, same-visit repairs, and no payment until the job is done.">
+    <link rel="canonical" href="https://eagleeyebackflow.ca/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Eagle Eye Backflow">
+    <meta property="og:title" content="Eagle Eye Backflow – Greater Vancouver Backflow Testing &amp; Repair">
+    <meta property="og:description" content="Certified backflow testing and repair across Metro Vancouver. Licensed, insured technicians, same-visit repairs, and no payment until the job is done.">
+    <meta property="og:url" content="https://eagleeyebackflow.ca/">
+    <meta property="og:image" content="https://eagleeyebackflow.ca/images/hero.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+    <link rel="preload" as="image" href="images/hero.jpg">
     <link rel="stylesheet" href="style.css">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Eagle Eye Backflow",
+        "description": "Certified backflow testing and repair across Metro Vancouver.",
+        "telephone": "+1-604-283-3804",
+        "email": "eagle.eye.backflow@gmail.com",
+        "url": "https://eagleeyebackflow.ca/",
+        "image": "https://eagleeyebackflow.ca/images/hero.jpg",
+        "priceRange": "$$",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Vancouver",
+            "addressRegion": "BC",
+            "addressCountry": "CA"
+        },
+        "areaServed": [
+            "Vancouver", "Burnaby", "North Vancouver", "West Vancouver", "Richmond",
+            "Surrey", "Delta", "New Westminster", "Coquitlam", "Port Coquitlam",
+            "Langley", "Pitt Meadows", "Maple Ridge"
+        ]
+    }
+    </script>
 </head>
 <body>
 
@@ -21,7 +62,7 @@
                 <img src="images/logo.svg" alt="Eagle Eye Backflow logo" width="34" height="40">
                 Eagle&nbsp;Eye&nbsp;Backflow
             </div>
-            <div class="menu-toggle" onclick="toggleNav()">☰</div>
+            <button type="button" class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-list" onclick="toggleNav(this)">☰</button>
             <ul id="nav-list">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#services">Services</a></li>
@@ -171,7 +212,7 @@
     </div>
 
     <!-- Spam honeypot -->
-    <input type="text" name="_gotcha" style="display:none">
+    <input type="text" name="_gotcha" style="display:none" aria-hidden="true" tabindex="-1" autocomplete="off">
 
     <!-- Redirect after submit -->
     <input type="hidden" name="_next" value="https://eagleeyebackflow.ca/thank-you.html">
@@ -184,14 +225,16 @@
 
     <!-- Footer -->
     <footer>
-        &copy; 2025 Eagle Eye Backflow. All rights reserved.
+        &copy; <span id="year"></span> Eagle Eye Backflow. All rights reserved.
     </footer>
 
     <!-- Mobile nav script -->
     <script>
-        function toggleNav() {
-            document.getElementById('nav-list').classList.toggle('nav-open');
+        function toggleNav(toggleBtn) {
+            var isOpen = document.getElementById('nav-list').classList.toggle('nav-open');
+            toggleBtn.setAttribute('aria-expanded', isOpen);
         }
+        document.getElementById('year').textContent = new Date().getFullYear();
     </script>
      <script>
       // Select the form inside .contact-form
