@@ -99,6 +99,10 @@ nav ul li a:hover {
     color: var(--primary-color);
 }
 
+nav .menu-toggle {
+    display: none;
+}
+
 /* Hero section */
 .hero {
     position: relative;
@@ -140,7 +144,7 @@ nav ul li a:hover {
     margin-right: auto;
 }
 
-.hero .btn {
+.btn {
     display: inline-block;
     background: var(--accent-color);
     color: var(--white);
@@ -150,7 +154,7 @@ nav ul li a:hover {
     transition: background 0.2s;
 }
 
-.hero .btn:hover {
+.btn:hover {
     background: var(--secondary-color);
 }
 
@@ -335,6 +339,16 @@ footer {
 @media (max-width: 768px) {
     nav ul {
         display: none;
+    }
+    nav ul.nav-open {
+        display: flex;
+        flex-direction: column;
+        background: var(--white);
+        position: absolute;
+        top: 100%;
+        right: 0;
+        padding: 1rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
     nav .menu-toggle {
         display: block;

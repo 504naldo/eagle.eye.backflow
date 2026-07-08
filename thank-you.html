@@ -1,21 +1,44 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Thank You!</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You – Eagle Eye Backflow</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="site-header">
-    <nav>
-      <div class="logo">
-        <img src="images/logo.png" alt="Eagle Eye Backflow Services logo" class="site-logo">
-      </div>
-      <!-- your nav here -->
-    </nav>
-  </header>
-
-  <main class="container">
-    <h1>Thank You for Reaching Out!</h1>
-    <p>Your request has been received. We’ll get back to you within 24 hours.</p>
-    <a href="/" class="button">Return Home</a>
-  </main>
+    <div class="call-bar">
+        Call or Text: <a href="tel:6042833804" style="color: var(--white); text-decoration: underline;">604‑283‑3804</a>
+    </div>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/logo.svg" alt="Eagle Eye Backflow logo" width="34" height="40">
+                Eagle&nbsp;Eye&nbsp;Backflow
+            </div>
+            <div class="menu-toggle" onclick="toggleNav()">☰</div>
+            <ul id="nav-list">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#service-area">Service&nbsp;Area</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section style="text-align: center;">
+        <h2>Thank You for Reaching Out!</h2>
+        <p>Your request has been received. We’ll get back to you within 24 hours.</p>
+        <p><a href="index.html" class="btn">Return Home</a></p>
+    </section>
+    <footer>
+        &copy; 2025 Eagle Eye Backflow. All rights reserved.
+    </footer>
+    <script>
+        function toggleNav() {
+            document.getElementById('nav-list').classList.toggle('nav-open');
+        }
+    </script>
+</body>
+</html>
