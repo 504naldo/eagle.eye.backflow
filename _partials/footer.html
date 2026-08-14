@@ -1,3 +1,49 @@
-<footer>
-    &copy; <span id="year">{{year}}</span> Eagle Eye Backflow. All rights reserved.
+<footer class="site-footer">
+    <div class="wrap">
+        <div class="site-footer__top">
+            <div class="site-footer__brand">
+                <img src="{{root}}images/logo.svg" alt="" width="34" height="40" aria-hidden="true">
+                <p class="site-footer__name">Eagle Eye Backflow Services</p>
+                <p class="site-footer__tagline">Serving Greater Vancouver and surrounding communities.</p>
+                <ul class="site-footer__contact">
+                    <li><a href="{{phoneHref}}" data-track="phone-click" data-track-location="footer">{{phoneDisplay}}</a></li>
+                    <li><a href="mailto:{{email}}" data-track="email-click" data-track-location="footer">{{email}}</a></li>
+                    <li><a href="{{siteUrl}}/">eagleeyebackflow.ca</a></li>
+                </ul>
+            </div>
+
+            <nav class="site-footer__nav" aria-label="Services">
+                <h2 class="site-footer__heading">Services</h2>
+                <ul>
+                    <li><a href="{{root}}index.html#services">Backflow Testing</a></li>
+                    <li><a href="{{root}}index.html#services">Backflow Repair</a></li>
+                    <li><a href="{{root}}index.html#services">Retesting &amp; Certification</a></li>
+                    <li><a href="{{root}}index.html#services">Report Submission</a></li>
+                    <li><a href="{{root}}index.html#property-managers">Multi-Property Testing</a></li>
+                </ul>
+            </nav>
+
+            <nav class="site-footer__nav" aria-label="Service areas">
+                <h2 class="site-footer__heading">Service Areas</h2>
+                <ul>
+                    {{footerCityLinks}}
+                    <li><a href="{{root}}service-areas.html">All service areas</a></li>
+                </ul>
+            </nav>
+
+            <nav class="site-footer__nav" aria-label="Company">
+                <h2 class="site-footer__heading">Company</h2>
+                <ul>
+                    <li><a href="{{root}}faq.html">FAQ</a></li>
+                    <li><a href="{{root}}contact.html">Contact</a></li>
+                    <li><a href="{{root}}privacy-policy.html">Privacy Policy</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="site-footer__bottom">
+            <p>&copy; <span id="year">{{year}}</span> Eagle Eye Backflow Services. All rights reserved.</p>
+            <p>BCWWA certified tester. Insured.</p>
+        </div>
+    </div>
 </footer>

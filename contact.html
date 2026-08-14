@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<!-- @partial head -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Book a Backflow Test | Greater Vancouver | Eagle Eye Backflow</title>
+<meta name="description" content="Book certified backflow testing across Greater Vancouver. Send your property details and we will confirm pricing before any work begins.">
+<link rel="canonical" href="https://eagleeyebackflow.ca/contact.html">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Eagle Eye Backflow Services">
+<meta property="og:locale" content="en_CA">
+<meta property="og:title" content="Book a Backflow Test | Greater Vancouver | Eagle Eye Backflow">
+<meta property="og:description" content="Book certified backflow testing across Greater Vancouver. Send your property details and we will confirm pricing before any work begins.">
+<meta property="og:url" content="https://eagleeyebackflow.ca/contact.html">
+<meta property="og:image" content="https://eagleeyebackflow.ca/images/hero.jpg">
+<meta property="og:image:alt" content="Eagle Eye Backflow Services — certified backflow testing across Greater Vancouver">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Book a Backflow Test | Greater Vancouver | Eagle Eye Backflow">
+<meta name="twitter:description" content="Book certified backflow testing across Greater Vancouver. Send your property details and we will confirm pricing before any work begins.">
+<meta name="twitter:image" content="https://eagleeyebackflow.ca/images/hero.jpg">
+<meta name="theme-color" content="#0d2340">
+
+<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+<!--
+    Fonts are self-hosted (see fonts/ and the @font-face block in style.css), so
+    there is no third-party font request. The two weights that appear above the
+    fold are preloaded; the rest are fetched as needed.
+-->
+<link rel="preload" href="fonts/barlow-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/barlow-semicondensed-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+<!-- @endpartial -->
+</head>
+<body class="page page--contact">
+
+<!-- @partial header -->
+<a class="skip-link" href="#main">Skip to content</a>
+
+<div class="utility-bar">
+    <div class="wrap utility-bar__inner">
+        <p class="utility-bar__claim">Certified backflow testing across Greater Vancouver — we handle the paperwork.</p>
+        <p class="utility-bar__contact">
+            <a href="tel:+16042833804" data-track="phone-click" data-track-location="utility-bar">Call or text 604-283-3804</a>
+        </p>
+    </div>
+</div>
+
+<header class="masthead">
+    <div class="wrap masthead__inner">
+        <a class="brand" href="index.html">
+            <img src="images/logo.svg" alt="" width="34" height="40" aria-hidden="true">
+            <span class="brand__name">Eagle&nbsp;Eye <span class="brand__sub">Backflow Services</span></span>
+        </a>
+
+        <button type="button" class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="site-nav">
+            <span class="nav-toggle__bar" aria-hidden="true"></span>
+            <span class="nav-toggle__label">Menu</span>
+        </button>
+
+        <nav class="site-nav" id="site-nav" aria-label="Main">
+            <ul class="site-nav__list">
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="service-areas.html">Service Areas</a></li>
+                <li><a href="index.html#property-managers">Property Managers</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li class="site-nav__cta">
+                    <a class="btn btn--primary btn--sm" href="contact.html" data-track="cta-click" data-track-location="nav">Book My Test</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<!-- @endpartial -->
+
+<main id="main">
+
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <div class="wrap">
+            <ol>
+                <li><a href="index.html">Home</a></li>
+                <li aria-current="page">Book a Test</li>
+            </ol>
+        </div>
+    </nav>
+
+    <section class="section">
+        <div class="wrap layout-split">
+            <div class="layout-split__main">
+                <p class="eyebrow">Book a Test</p>
+                <h1>Tell us which property needs testing</h1>
+                <p class="section__intro">
+                    Send the address and, if you have one, a photo of the device or your
+                    municipal notice. We will confirm pricing before any work begins — and
+                    you do not pay until the work is complete.
+                </p>
+
+                <!-- @partial bookingForm -->
+                <form class="booking-form" action="https://formspree.io/f/mwpqwovj" method="POST" enctype="multipart/form-data" novalidate>
+
+                    <div class="booking-form__grid">
+                        <div class="field">
+                            <label for="bf-name">Name <span class="req" aria-hidden="true">*</span></label>
+                            <input type="text" id="bf-name" name="name" autocomplete="name" required>
+                            <p class="field__error" id="bf-name-error" hidden></p>
+                        </div>
+
+                        <div class="field">
+                            <label for="bf-company">Company / strata / property name <span class="field__opt">Optional</span></label>
+                            <input type="text" id="bf-company" name="company" autocomplete="organization">
+                        </div>
+
+                        <div class="field">
+                            <label for="bf-phone">Phone <span class="req" aria-hidden="true">*</span></label>
+                            <input type="tel" id="bf-phone" name="phone" inputmode="tel" autocomplete="tel" placeholder="604-555-0142" required>
+                            <p class="field__error" id="bf-phone-error" hidden></p>
+                        </div>
+
+                        <div class="field">
+                            <label for="bf-email">Email <span class="req" aria-hidden="true">*</span></label>
+                            <input type="email" id="bf-email" name="_replyto" inputmode="email" autocomplete="email" required>
+                            <p class="field__error" id="bf-email-error" hidden></p>
+                        </div>
+
+                        <div class="field field--wide">
+                            <label for="bf-address">Property address <span class="req" aria-hidden="true">*</span></label>
+                            <input type="text" id="bf-address" name="address" autocomplete="street-address" placeholder="Street address of the property to be tested" required>
+                            <p class="field__error" id="bf-address-error" hidden></p>
+                        </div>
+
+                        <div class="field">
+                            <label for="bf-municipality">Municipality <span class="req" aria-hidden="true">*</span></label>
+                            <select id="bf-municipality" name="municipality" required>
+                                <option value="">Select…</option>
+                                <option value="Vancouver">Vancouver</option>
+                                <option value="Richmond">Richmond</option>
+                                <option value="Surrey">Surrey</option>
+                                <option value="Delta">Delta</option>
+                                <option value="Burnaby">Burnaby</option>
+                                <option value="New Westminster">New Westminster</option>
+                                <option value="Coquitlam">Coquitlam</option>
+                                <option value="Port Coquitlam">Port Coquitlam</option>
+                                <option value="Port Moody">Port Moody</option>
+                                <option value="Langley">Langley</option>
+                                <option value="North Vancouver">North Vancouver</option>
+                                <option value="West Vancouver">West Vancouver</option>
+                                <option value="Tsawwassen">Tsawwassen</option>
+                                <option value="Ladner">Ladner</option>
+                                <option value="Other">Other / not listed</option>
+                            </select>
+                            <p class="field__error" id="bf-municipality-error" hidden></p>
+                        </div>
+
+                        <div class="field">
+                            <label for="bf-devices">Number of backflow devices</label>
+                            <select id="bf-devices" name="devices">
+                                <option value="">Select…</option>
+                                <option value="1">1</option>
+                                <option value="2–5">2–5</option>
+                                <option value="6–10">6–10</option>
+                                <option value="10+">10+</option>
+                                <option value="Not sure">Not sure</option>
+                            </select>
+                        </div>
+
+                        <div class="field field--wide">
+                            <label for="bf-service">Service needed</label>
+                            <select id="bf-service" name="service">
+                                <option value="">Select…</option>
+                                <option value="Annual backflow test">Annual backflow test</option>
+                                <option value="Failed device / repair">Failed device / repair</option>
+                                <option value="Retest">Retest</option>
+                                <option value="Multi-property testing">Multi-property testing</option>
+                                <option value="Not sure">Not sure</option>
+                            </select>
+                        </div>
+
+                        <div class="field field--wide">
+                            <label for="bf-upload">Photo of the device, municipal notice, or previous report <span class="field__opt">Optional</span></label>
+                            <input type="file" id="bf-upload" name="upload" accept=".jpg,.jpeg,.png,.pdf,image/jpeg,image/png,application/pdf">
+                            <p class="field__hint">JPG, PNG, or PDF up to 10&nbsp;MB. A photo of the device or your notice is usually enough for us to quote accurately.</p>
+                            <p class="field__error" id="bf-upload-error" hidden></p>
+                        </div>
+
+                        <div class="field field--wide">
+                            <label for="bf-notes">Additional notes <span class="field__opt">Optional</span></label>
+                            <textarea id="bf-notes" name="notes" rows="4" placeholder="Access details, where the device is located, deadlines, or anything else worth knowing."></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Spam trap. Hidden from people, tempting to bots. -->
+                    <div class="hp" aria-hidden="true">
+                        <label for="bf-gotcha">Leave this field empty</label>
+                        <input type="text" id="bf-gotcha" name="_gotcha" tabindex="-1" autocomplete="off">
+                    </div>
+
+                    <input type="hidden" name="_subject" value="Backflow booking request — eagleeyebackflow.ca">
+                    <!-- Redirect target for a submission made without JavaScript. -->
+                    <input type="hidden" name="_next" value="https://eagleeyebackflow.ca/thank-you.html">
+
+                    <div class="booking-form__status" role="status" aria-live="polite" tabindex="-1"></div>
+
+                    <div class="booking-form__actions">
+                        <button type="submit" class="btn btn--primary btn--lg" data-track="form-submit" data-track-location="booking-form">
+                            Book My Backflow Test
+                        </button>
+                        <p class="booking-form__aside">
+                            Prefer to talk it through? Call or text
+                            <a href="tel:+16042833804" data-track="phone-click" data-track-location="booking-form">604-283-3804</a>.
+                        </p>
+                    </div>
+                </form>
+                <!-- @endpartial -->
+            </div>
+
+            <aside class="layout-split__aside">
+                <div class="panel panel--quiet">
+                    <h2 class="panel__title">Prefer to talk?</h2>
+                    <ul class="ticklist">
+                        <li><a href="tel:+16042833804" data-track="phone-click" data-track-location="contact-aside">604-283-3804</a> — call or text</li>
+                        <li><a href="mailto:eagle.eye.backflow@gmail.com" data-track="email-click" data-track-location="contact-aside">eagle.eye.backflow@gmail.com</a></li>
+                    </ul>
+                    <p class="panel__note">Greater Vancouver and surrounding communities.</p>
+                </div>
+
+                <div class="panel panel--navy" style="margin-top: 1.5rem;">
+                    <h2 class="panel__title">Managing several properties?</h2>
+                    <p>
+                        Send the full address list rather than booking one at a time. We will
+                        group the testing into as few visits as the geography allows and handle
+                        report submission across the portfolio.
+                    </p>
+                </div>
+
+                <div class="panel" style="margin-top: 1.5rem;">
+                    <h2 class="panel__title">What happens next</h2>
+                    <ul class="ticklist">
+                        <li>We review the details and confirm pricing</li>
+                        <li>We agree a time that suits the property's access</li>
+                        <li>A certified tester attends and tests every assembly</li>
+                        <li>Repairs on the spot where the fault allows</li>
+                        <li>We submit the required documentation for you</li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+</main>
+
+<!-- @partial footer -->
+<footer class="site-footer">
+    <div class="wrap">
+        <div class="site-footer__top">
+            <div class="site-footer__brand">
+                <img src="images/logo.svg" alt="" width="34" height="40" aria-hidden="true">
+                <p class="site-footer__name">Eagle Eye Backflow Services</p>
+                <p class="site-footer__tagline">Serving Greater Vancouver and surrounding communities.</p>
+                <ul class="site-footer__contact">
+                    <li><a href="tel:+16042833804" data-track="phone-click" data-track-location="footer">604-283-3804</a></li>
+                    <li><a href="mailto:eagle.eye.backflow@gmail.com" data-track="email-click" data-track-location="footer">eagle.eye.backflow@gmail.com</a></li>
+                    <li><a href="https://eagleeyebackflow.ca/">eagleeyebackflow.ca</a></li>
+                </ul>
+            </div>
+
+            <nav class="site-footer__nav" aria-label="Services">
+                <h2 class="site-footer__heading">Services</h2>
+                <ul>
+                    <li><a href="index.html#services">Backflow Testing</a></li>
+                    <li><a href="index.html#services">Backflow Repair</a></li>
+                    <li><a href="index.html#services">Retesting &amp; Certification</a></li>
+                    <li><a href="index.html#services">Report Submission</a></li>
+                    <li><a href="index.html#property-managers">Multi-Property Testing</a></li>
+                </ul>
+            </nav>
+
+            <nav class="site-footer__nav" aria-label="Service areas">
+                <h2 class="site-footer__heading">Service Areas</h2>
+                <ul>
+                    <li><a href="vancouver-backflow-testing/">Vancouver</a></li>
+                    <li><a href="richmond-backflow-testing/">Richmond</a></li>
+                    <li><a href="surrey-backflow-testing/">Surrey</a></li>
+                    <li><a href="delta-backflow-testing/">Delta</a></li>
+                    <li><a href="burnaby-backflow-testing/">Burnaby</a></li>
+                    <li><a href="service-areas.html">All service areas</a></li>
+                </ul>
+            </nav>
+
+            <nav class="site-footer__nav" aria-label="Company">
+                <h2 class="site-footer__heading">Company</h2>
+                <ul>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="site-footer__bottom">
+            <p>&copy; <span id="year">2026</span> Eagle Eye Backflow Services. All rights reserved.</p>
+            <p>BCWWA certified tester. Insured.</p>
+        </div>
+    </div>
+</footer>
+<!-- @endpartial -->
+
+<!-- @partial mobileCta -->
+<!--
+    Sticky mobile action bar. Hidden at desktop widths by the stylesheet, and
+    the body carries matching bottom padding on mobile so it never sits on top
+    of page content.
+-->
+<div class="mobile-cta" role="group" aria-label="Contact Eagle Eye">
+    <a class="mobile-cta__action mobile-cta__action--call" href="tel:+16042833804"
+       data-track="phone-click" data-track-location="mobile-bar">
+        <span class="mobile-cta__label">Call / Text</span>
+        <span class="mobile-cta__value">604-283-3804</span>
+    </a>
+    <a class="mobile-cta__action mobile-cta__action--book" href="contact.html"
+       data-track="cta-click" data-track-location="mobile-bar">
+        Book Test
+    </a>
+</div>
+<!-- @endpartial -->
+
+</body>
+</html>

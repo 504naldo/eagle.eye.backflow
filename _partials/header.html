@@ -1,20 +1,36 @@
-<div class="call-bar">
-    Call or Text: <a href="tel:6042833804">604‑283‑3804</a>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<div class="utility-bar">
+    <div class="wrap utility-bar__inner">
+        <p class="utility-bar__claim">Certified backflow testing across Greater Vancouver — we handle the paperwork.</p>
+        <p class="utility-bar__contact">
+            <a href="{{phoneHref}}" data-track="phone-click" data-track-location="utility-bar">Call or text {{phoneDisplay}}</a>
+        </p>
+    </div>
 </div>
 
-<header>
-    <nav>
-        <div class="logo">
-            <img src="images/logo.svg" alt="Eagle Eye Backflow logo" width="34" height="40">
-            Eagle&nbsp;Eye&nbsp;Backflow
-        </div>
-        <button type="button" class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-list">☰</button>
-        <ul id="nav-list">
-            <li><a href="{{home}}#home"{{aria_home}}>Home</a></li>
-            <li><a href="{{home}}#services">Services</a></li>
-            <li><a href="{{home}}#service-area">Service&nbsp;Area</a></li>
-            <li><a href="faq.html"{{aria_faq}}>FAQ</a></li>
-            <li><a href="{{home}}#contact">Contact</a></li>
-        </ul>
-    </nav>
+<header class="masthead">
+    <div class="wrap masthead__inner">
+        <a class="brand" href="{{root}}index.html">
+            <img src="{{root}}images/logo.svg" alt="" width="34" height="40" aria-hidden="true">
+            <span class="brand__name">Eagle&nbsp;Eye <span class="brand__sub">Backflow Services</span></span>
+        </a>
+
+        <button type="button" class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="site-nav">
+            <span class="nav-toggle__bar" aria-hidden="true"></span>
+            <span class="nav-toggle__label">Menu</span>
+        </button>
+
+        <nav class="site-nav" id="site-nav" aria-label="Main">
+            <ul class="site-nav__list">
+                <li><a href="{{root}}index.html#services"{{nav_services}}>Services</a></li>
+                <li><a href="{{root}}service-areas.html"{{nav_areas}}>Service Areas</a></li>
+                <li><a href="{{root}}index.html#property-managers"{{nav_pm}}>Property Managers</a></li>
+                <li><a href="{{root}}faq.html"{{nav_faq}}>FAQ</a></li>
+                <li class="site-nav__cta">
+                    <a class="btn btn--primary btn--sm" href="{{root}}contact.html" data-track="cta-click" data-track-location="nav">Book My Test</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
 </header>

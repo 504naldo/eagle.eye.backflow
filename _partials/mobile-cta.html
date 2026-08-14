@@ -1,0 +1,16 @@
+<!--
+    Sticky mobile action bar. Hidden at desktop widths by the stylesheet, and
+    the body carries matching bottom padding on mobile so it never sits on top
+    of page content.
+-->
+<div class="mobile-cta" role="group" aria-label="Contact Eagle Eye">
+    <a class="mobile-cta__action mobile-cta__action--call" href="{{phoneHref}}"
+       data-track="phone-click" data-track-location="mobile-bar">
+        <span class="mobile-cta__label">Call / Text</span>
+        <span class="mobile-cta__value">{{phoneDisplay}}</span>
+    </a>
+    <a class="mobile-cta__action mobile-cta__action--book" href="{{root}}contact.html"
+       data-track="cta-click" data-track-location="mobile-bar">
+        Book Test
+    </a>
+</div>

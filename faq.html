@@ -1,87 +1,385 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-CA">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAQ – Eagle Eye Backflow</title>
-    <meta name="description" content="Answers to common questions about backflow testing requirements, fines for missed tests, and who is qualified to test backflow assemblies in Metro Vancouver.">
-    <link rel="canonical" href="https://eagleeyebackflow.ca/faq.html">
+<!-- @partial head -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Backflow Testing FAQ | Greater Vancouver | Eagle Eye Backflow</title>
+<meta name="description" content="Answers about backflow testing: what a backflow preventer is, how often testing is required, what happens if a device fails, and who submits the report.">
+<link rel="canonical" href="https://eagleeyebackflow.ca/faq.html">
 
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Eagle Eye Backflow">
-    <meta property="og:title" content="FAQ – Eagle Eye Backflow">
-    <meta property="og:description" content="Answers to common questions about backflow testing requirements, fines for missed tests, and who is qualified to test backflow assemblies in Metro Vancouver.">
-    <meta property="og:url" content="https://eagleeyebackflow.ca/faq.html">
-    <meta name="twitter:card" content="summary">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Eagle Eye Backflow Services">
+<meta property="og:locale" content="en_CA">
+<meta property="og:title" content="Backflow Testing FAQ | Greater Vancouver | Eagle Eye Backflow">
+<meta property="og:description" content="Answers about backflow testing: what a backflow preventer is, how often testing is required, what happens if a device fails, and who submits the report.">
+<meta property="og:url" content="https://eagleeyebackflow.ca/faq.html">
+<meta property="og:image" content="https://eagleeyebackflow.ca/images/hero.jpg">
+<meta property="og:image:alt" content="Eagle Eye Backflow Services — certified backflow testing across Greater Vancouver">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Backflow Testing FAQ | Greater Vancouver | Eagle Eye Backflow">
+<meta name="twitter:description" content="Answers about backflow testing: what a backflow preventer is, how often testing is required, what happens if a device fails, and who submits the report.">
+<meta name="twitter:image" content="https://eagleeyebackflow.ca/images/hero.jpg">
+<meta name="theme-color" content="#0d2340">
 
-    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+<!--
+    Fonts are self-hosted (see fonts/ and the @font-face block in style.css), so
+    there is no third-party font request. The two weights that appear above the
+    fold are preloaded; the rest are fetched as needed.
+-->
+<link rel="preload" href="fonts/barlow-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/barlow-semicondensed-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+<!-- @endpartial -->
+
+<!-- @partial faqSchema -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "What is a backflow preventer?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "A backflow preventer is a valve assembly installed on a water line to stop water flowing backwards into the drinking water supply. If pressure in the system drops or reverses, whatever is on the far side of that connection — irrigation water, boiler treatment, chemicals, process water — can be drawn back toward the mains. The assembly is what stands between that and the potable supply."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Why does a backflow preventer need testing?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Because it is a mechanical device with moving parts, springs, and seals, and it fails silently. A backflow assembly that has stopped working looks exactly like one that is working. Testing is the only way to confirm it still holds, which is why testing is required rather than optional."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "How often does backflow testing need to be completed?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Annual testing is the general standard for backflow assemblies, and some installations are required to be tested more frequently depending on the hazard and the property. The requirement that applies to your property is set by your municipality. If you have received a notice, it will state the deadline — send it to us and we will work to it."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "How long does a backflow test take?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The test itself is normally quick — often around 20 to 30 minutes per assembly once we have access to it and the paperwork is prepared. Finding the device and getting into the space it lives in is frequently the longer part of the visit, which is why access details help so much when you book."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Does Eagle Eye submit the test report?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. Reporting requirements vary by municipality, and Eagle Eye submits the required test documentation through the applicable municipal reporting system on your behalf. You do not need to understand or navigate the reporting process yourself."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What happens if my backflow device fails the test?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "A failed assembly needs to be repaired or replaced and then retested. We will tell you at the time what has failed, whether it is repairable, and what it will cost before any repair work goes ahead."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Can you repair the device during the same visit?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Often, yes. We carry common replacement parts and rebuild kits, so many typical failures — fouled check valves, worn relief valves, perished seals — can be repaired and the assembly retested before we leave. Larger assemblies and less common devices sometimes need a part ordered in, and we will tell you that on the spot rather than afterwards."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Do I need to be on site during the test?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Usually not. What we need is access to the assembly. If a caretaker, building manager, tenant, or concierge can let us in, most tests are completed without the owner or strata council present."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Will the water be shut off?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Briefly, to the line the assembly protects — normally a matter of minutes per device. Where that matters, such as a restaurant mid-service or a medical office, tell us when you book and we will schedule around it."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "How much does backflow testing cost?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "It depends on the number of assemblies, their size and type, and how accessible they are — which is why we quote rather than publish a single figure. Send us a photo of the device or your municipal notice and we will give you clear pricing before any work begins. You do not pay until the work is complete."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What happens if testing is not completed?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Failure to complete required testing may result in enforcement action, fees, or other penalties depending on your municipality. The specifics differ from one city to the next, so check the notice you received or ask us and we will point you to the right place."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Which municipalities do you service?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Eagle Eye covers Greater Vancouver: Vancouver, Richmond, Surrey, Delta including Ladner and Tsawwassen, Burnaby, New Westminster, Coquitlam, Port Coquitlam, Port Moody, Langley, North Vancouver, and West Vancouver. If your community is nearby but not listed, ask — we will tell you straight away whether we can attend."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Do you work with strata corporations and property managers?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, and a large part of the work is exactly that. We can work to your access procedures, coordinate with caretakers directly, and provide documentation in the form your records need."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Can you handle testing across multiple properties?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. Send the full address list rather than booking one at a time and we will group the testing into as few visits as the geography allows, complete repairs where we can, and handle report submission across the whole portfolio."
+            }
+        }
+    ]
+}
+</script>
+<!-- @endpartial -->
 </head>
-<body>
+<body class="page page--faq">
 
-    <!-- @partial header -->
-    <div class="call-bar">
-        Call or Text: <a href="tel:6042833804">604‑283‑3804</a>
+<!-- @partial header -->
+<a class="skip-link" href="#main">Skip to content</a>
+
+<div class="utility-bar">
+    <div class="wrap utility-bar__inner">
+        <p class="utility-bar__claim">Certified backflow testing across Greater Vancouver — we handle the paperwork.</p>
+        <p class="utility-bar__contact">
+            <a href="tel:+16042833804" data-track="phone-click" data-track-location="utility-bar">Call or text 604-283-3804</a>
+        </p>
     </div>
+</div>
 
-    <header>
-        <nav>
-            <div class="logo">
-                <img src="images/logo.svg" alt="Eagle Eye Backflow logo" width="34" height="40">
-                Eagle&nbsp;Eye&nbsp;Backflow
-            </div>
-            <button type="button" class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-list">☰</button>
-            <ul id="nav-list">
-                <li><a href="index.html#home">Home</a></li>
+<header class="masthead">
+    <div class="wrap masthead__inner">
+        <a class="brand" href="index.html">
+            <img src="images/logo.svg" alt="" width="34" height="40" aria-hidden="true">
+            <span class="brand__name">Eagle&nbsp;Eye <span class="brand__sub">Backflow Services</span></span>
+        </a>
+
+        <button type="button" class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="site-nav">
+            <span class="nav-toggle__bar" aria-hidden="true"></span>
+            <span class="nav-toggle__label">Menu</span>
+        </button>
+
+        <nav class="site-nav" id="site-nav" aria-label="Main">
+            <ul class="site-nav__list">
                 <li><a href="index.html#services">Services</a></li>
-                <li><a href="index.html#service-area">Service&nbsp;Area</a></li>
+                <li><a href="service-areas.html">Service Areas</a></li>
+                <li><a href="index.html#property-managers">Property Managers</a></li>
                 <li><a href="faq.html" aria-current="page">FAQ</a></li>
-                <li><a href="index.html#contact">Contact</a></li>
+                <li class="site-nav__cta">
+                    <a class="btn btn--primary btn--sm" href="contact.html" data-track="cta-click" data-track-location="nav">Book My Test</a>
+                </li>
             </ul>
         </nav>
-    </header>
-    <!-- @endpartial -->
+    </div>
+</header>
+<!-- @endpartial -->
 
-    <section>
-        <h2>Frequently Asked Questions</h2>
-        <div class="faq">
-            <h3>What happens if I don’t get a backflow test done when required?</h3>
-            <p>Municipal bylaws require annual backflow testing. Failure to do so can result in fines ranging from $250 to $10,000 per day and, in extreme cases, the city may cut off your water service.</p>
+<main id="main">
 
-            <h3>What is backflow?</h3>
-            <p>Backflow is the undesirable reversal of water (or other liquids, gases or solids) into the potable water supply. It is caused by back pressure or back siphonage.</p>
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <div class="wrap">
+            <ol>
+                <li><a href="index.html">Home</a></li>
+                <li aria-current="page">FAQ</li>
+            </ol>
+        </div>
+    </nav>
 
-            <h3>What is a backflow assembly?</h3>
-            <p>A backflow assembly is an assembled unit designed to prevent backflow from entering the water system. It includes shutoff valves and test cocks.</p>
+    <section class="section">
+        <div class="wrap wrap--narrow">
+            <p class="eyebrow">Questions</p>
+            <h1>Backflow testing questions, answered</h1>
+            <p class="section__intro">
+                What a backflow preventer is, how often it needs testing, what happens when
+                one fails, and who deals with the paperwork. If your question is not here,
+                call or text
+                <a href="tel:+16042833804" data-track="phone-click" data-track-location="faq-intro">604-283-3804</a>.
+            </p>
 
-            <h3>Where are backflow assemblies located?</h3>
-            <p>Backflow assemblies can be installed on irrigation systems, indoor and outdoor sprinkler systems, water filters, boilers, fountains, ponds and other plumbing systems.</p>
-
-            <h3>Who is qualified to test backflow assemblies?</h3>
-            <p>The city requires that testing be done by a Certified Backflow Assembly Tester whose qualifications have been verified by the city’s agent, BSI.</p>
-
-            <h3>What is a Certified Backflow Assembly Tester?</h3>
-            <p>A Certified Backflow Assembly Tester is an individual who has received formal training in backflow testing, has been certified by the BC Water and Waste Association (BCWWA) and renews their certification annually.</p>
+            <!-- @partial faqList -->
+            <div class="faq-list">
+                <details class="faq">
+                    <summary><span>What is a backflow preventer?</span></summary>
+                    <div class="faq__body"><p>A backflow preventer is a valve assembly installed on a water line to stop water flowing backwards into the drinking water supply. If pressure in the system drops or reverses, whatever is on the far side of that connection — irrigation water, boiler treatment, chemicals, process water — can be drawn back toward the mains. The assembly is what stands between that and the potable supply.</p></div>
+                </details>
+                <details class="faq">
+                    <summary><span>Why does a backflow preventer need testing?</span></summary>
+                    <div class="faq__body"><p>Because it is a mechanical device with moving parts, springs, and seals, and it fails silently. A backflow assembly that has stopped working looks exactly like one that is working. Testing is the only way to confirm it still holds, which is why testing is required rather than optional.</p></div>
+                </details>
+                <details class="faq">
+                    <summary><span>How often does backflow testing need to be completed?</span></summary>
+                    <div class="faq__body"><p>Annual testing is the general standard for backflow assemblies, and some installations are required to be tested more frequently depending on the hazard and the property. The requirement that applies to your property is set by your municipality. If you have received a notice, it will state the deadline — send it to us and we will work to it.</p></div>
+                </details>
+                <details class="faq">
+                    <summary><span>How long does a backflow test take?</span></summary>
+                    <div class="faq__body"><p>The test itself is normally quick — often around 20 to 30 minutes per assembly once we have access to it and the paperwork is prepared. Finding the device and getting into the space it lives in is frequently the longer part of the visit, which is why access details help so much when you book.</p></div>
+                </details>
+                <details class="faq">
+                    <summary><span>Does Eagle Eye submit the test report?</span></summary>
+                    <div class="faq__body"><p>Yes. Reporting requirements vary by municipality, and Eagle Eye submits the required test documentation through the applicable municipal reporting system on your behalf. You do not need to understand or navigate the reporting process yourself.</p></div>
+                </details>
+                <details class="faq">
+                    <summary><span>What happens if my backflow device fails the test?</span></summary>
+                    <div class="faq__body"><p>A failed assembly needs to be repaired or replaced and then retested. We will tell you at the time what has failed, whether it is repairable, and what it will cost before any repair work goes ahead.</p></div>
+                </details>
+                <details class="faq">
+                    <summary><span>Can you repair the device during the same visit?</span></summary>
+                    <div class="faq__body"><p>Often, yes. We carry common replacement parts and rebuild kits, so many typical failures — fouled check valves, worn relief valves, perished seals — can be repaired and the assembly retested before we leave. Larger assemblies and less common devices sometimes need a part ordered in, and we will tell you that on the spot rather than afterwards.</p></div>
+                </details>
+                <details class="faq">
+                    <summary><span>Do I need to be on site during the test?</span></summary>
+                    <div class="faq__body"><p>Usually not. What we need is access to the assembly. If a caretaker, building manager, tenant, or concierge can let us in, most tests are completed without the owner or strata council present.</p></div>
+                </details>
+                <details class="faq">
+                    <summary><span>Will the water be shut off?</span></summary>
+                    <div class="faq__body"><p>Briefly, to the line the assembly protects — normally a matter of minutes per device. Where that matters, such as a restaurant mid-service or a medical office, tell us when you book and we will schedule around it.</p></div>
+                </details>
+                <details class="faq">
+                    <summary><span>How much does backflow testing cost?</span></summary>
+                    <div class="faq__body"><p>It depends on the number of assemblies, their size and type, and how accessible they are — which is why we quote rather than publish a single figure. Send us a photo of the device or your municipal notice and we will give you clear pricing before any work begins. You do not pay until the work is complete.</p></div>
+                </details>
+                <details class="faq">
+                    <summary><span>What happens if testing is not completed?</span></summary>
+                    <div class="faq__body"><p>Failure to complete required testing may result in enforcement action, fees, or other penalties depending on your municipality. The specifics differ from one city to the next, so check the notice you received or ask us and we will point you to the right place.</p></div>
+                </details>
+                <details class="faq">
+                    <summary><span>Which municipalities do you service?</span></summary>
+                    <div class="faq__body"><p>Eagle Eye covers Greater Vancouver: Vancouver, Richmond, Surrey, Delta including Ladner and Tsawwassen, Burnaby, New Westminster, Coquitlam, Port Coquitlam, Port Moody, Langley, North Vancouver, and West Vancouver. If your community is nearby but not listed, ask — we will tell you straight away whether we can attend.</p></div>
+                </details>
+                <details class="faq">
+                    <summary><span>Do you work with strata corporations and property managers?</span></summary>
+                    <div class="faq__body"><p>Yes, and a large part of the work is exactly that. We can work to your access procedures, coordinate with caretakers directly, and provide documentation in the form your records need.</p></div>
+                </details>
+                <details class="faq">
+                    <summary><span>Can you handle testing across multiple properties?</span></summary>
+                    <div class="faq__body"><p>Yes. Send the full address list rather than booking one at a time and we will group the testing into as few visits as the geography allows, complete repairs where we can, and handle report submission across the whole portfolio.</p></div>
+                </details>
+            </div>
+            <!-- @endpartial -->
         </div>
     </section>
 
-    <section>
-        <h2>Have other questions?</h2>
-        <p>If you didn’t find the answer you were looking for, feel free to get in touch. We’re always happy to help.</p>
-        <p><strong>Email:</strong> <a href="mailto:eagle.eye.backflow@gmail.com">eagle.eye.backflow@gmail.com</a></p>
-        <p><strong>Phone:</strong> <a href="tel:6042833804">604‑283‑3804</a></p>
+    <section class="section section--mist">
+        <div class="wrap wrap--narrow">
+            <p class="eyebrow">Still Unsure?</p>
+            <h2 class="section__title">Send us the property and we will tell you what is needed</h2>
+            <p>
+                If you are not sure whether you have a backflow assembly, where it is, or what
+                your notice is asking for — send us the address and a photo if you have one.
+                We will tell you what we see.
+            </p>
+            <div class="cta-row" style="margin-top: 1.75rem;">
+                <a class="btn btn--primary btn--lg" href="contact.html"
+                   data-track="cta-click" data-track-location="faq-closer">Book My Backflow Test</a>
+                <a class="btn btn--outline btn--lg" href="tel:+16042833804"
+                   data-track="phone-click" data-track-location="faq-closer">Call / Text 604-283-3804</a>
+            </div>
+        </div>
     </section>
 
-    <!-- @partial footer -->
-    <footer>
-        &copy; <span id="year">2026</span> Eagle Eye Backflow. All rights reserved.
-    </footer>
-    <!-- @endpartial -->
+</main>
+
+<!-- @partial footer -->
+<footer class="site-footer">
+    <div class="wrap">
+        <div class="site-footer__top">
+            <div class="site-footer__brand">
+                <img src="images/logo.svg" alt="" width="34" height="40" aria-hidden="true">
+                <p class="site-footer__name">Eagle Eye Backflow Services</p>
+                <p class="site-footer__tagline">Serving Greater Vancouver and surrounding communities.</p>
+                <ul class="site-footer__contact">
+                    <li><a href="tel:+16042833804" data-track="phone-click" data-track-location="footer">604-283-3804</a></li>
+                    <li><a href="mailto:eagle.eye.backflow@gmail.com" data-track="email-click" data-track-location="footer">eagle.eye.backflow@gmail.com</a></li>
+                    <li><a href="https://eagleeyebackflow.ca/">eagleeyebackflow.ca</a></li>
+                </ul>
+            </div>
+
+            <nav class="site-footer__nav" aria-label="Services">
+                <h2 class="site-footer__heading">Services</h2>
+                <ul>
+                    <li><a href="index.html#services">Backflow Testing</a></li>
+                    <li><a href="index.html#services">Backflow Repair</a></li>
+                    <li><a href="index.html#services">Retesting &amp; Certification</a></li>
+                    <li><a href="index.html#services">Report Submission</a></li>
+                    <li><a href="index.html#property-managers">Multi-Property Testing</a></li>
+                </ul>
+            </nav>
+
+            <nav class="site-footer__nav" aria-label="Service areas">
+                <h2 class="site-footer__heading">Service Areas</h2>
+                <ul>
+                    <li><a href="vancouver-backflow-testing/">Vancouver</a></li>
+                    <li><a href="richmond-backflow-testing/">Richmond</a></li>
+                    <li><a href="surrey-backflow-testing/">Surrey</a></li>
+                    <li><a href="delta-backflow-testing/">Delta</a></li>
+                    <li><a href="burnaby-backflow-testing/">Burnaby</a></li>
+                    <li><a href="service-areas.html">All service areas</a></li>
+                </ul>
+            </nav>
+
+            <nav class="site-footer__nav" aria-label="Company">
+                <h2 class="site-footer__heading">Company</h2>
+                <ul>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="site-footer__bottom">
+            <p>&copy; <span id="year">2026</span> Eagle Eye Backflow Services. All rights reserved.</p>
+            <p>BCWWA certified tester. Insured.</p>
+        </div>
+    </div>
+</footer>
+<!-- @endpartial -->
+
+<!-- @partial mobileCta -->
+<!--
+    Sticky mobile action bar. Hidden at desktop widths by the stylesheet, and
+    the body carries matching bottom padding on mobile so it never sits on top
+    of page content.
+-->
+<div class="mobile-cta" role="group" aria-label="Contact Eagle Eye">
+    <a class="mobile-cta__action mobile-cta__action--call" href="tel:+16042833804"
+       data-track="phone-click" data-track-location="mobile-bar">
+        <span class="mobile-cta__label">Call / Text</span>
+        <span class="mobile-cta__value">604-283-3804</span>
+    </a>
+    <a class="mobile-cta__action mobile-cta__action--book" href="contact.html"
+       data-track="cta-click" data-track-location="mobile-bar">
+        Book Test
+    </a>
+</div>
+<!-- @endpartial -->
 
 </body>
 </html>

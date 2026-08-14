@@ -1,0 +1,22 @@
+<section class="section section--mist" id="reviews" aria-labelledby="reviews-heading">
+    <div class="wrap">
+        <div class="reviews__head">
+            <p class="eyebrow">Reviews</p>
+            <h2 class="section__title" id="reviews-heading">Trusted by property owners and businesses across Greater Vancouver</h2>
+            <p class="reviews__score">
+                <span class="reviews__stars" aria-hidden="true">★★★★★</span>
+                <span class="reviews__rating">{{reviewRating}}</span>
+                <span class="reviews__count">from {{reviewCount}} Google reviews</span>
+            </p>
+        </div>
+
+        <div class="reviews__list">
+            {{reviewCards}}
+        </div>
+
+        <p class="reviews__cta">
+            <a class="btn btn--outline" href="{{reviewUrl}}" target="_blank" rel="noopener"
+               data-track="cta-click" data-track-location="reviews">Read our Google reviews</a>
+        </p>
+    </div>
+</section>
