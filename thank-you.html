@@ -22,8 +22,14 @@
 <meta name="twitter:image" content="https://eagleeyebackflow.ca/images/hero.jpg">
 <meta name="theme-color" content="#0d2340">
 
-<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+<!--
+    Icons are the Eagle Eye mark (images/logo.png) centred on a white square.
+    There is deliberately no SVG icon: browsers prefer an SVG over every PNG
+    offered, and the mark is illustrated artwork that has not been vectorised,
+    so a stale SVG here would silently override all of these.
+-->
 <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="images/icon-192.png">
 <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 
 <!--
@@ -54,7 +60,7 @@
 <header class="masthead">
     <div class="wrap masthead__inner">
         <a class="brand" href="index.html">
-            <img src="images/logo.svg" alt="" width="34" height="40" aria-hidden="true">
+            <img src="images/logo.png" alt="" width="38" height="45" aria-hidden="true">
             <span class="brand__name">Eagle&nbsp;Eye <span class="brand__sub">Backflow Services</span></span>
         </a>
 
@@ -131,7 +137,14 @@
     <div class="wrap">
         <div class="site-footer__top">
             <div class="site-footer__brand">
-                <img src="images/logo.svg" alt="" width="34" height="40" aria-hidden="true">
+                <!--
+                    The mark is drawn for light backgrounds — the eagle's head is
+                    white and its outlines are navy — so on the dark footer it
+                    sits on a light tile rather than dissolving into the ground.
+                -->
+                <span class="site-footer__mark">
+                    <img src="images/logo.png" alt="" width="41" height="48" aria-hidden="true">
+                </span>
                 <p class="site-footer__name">Eagle Eye Backflow Services</p>
                 <p class="site-footer__tagline">Serving Greater Vancouver and surrounding communities.</p>
                 <ul class="site-footer__contact">

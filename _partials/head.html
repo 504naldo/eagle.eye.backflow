@@ -18,8 +18,14 @@
 <meta name="twitter:image" content="{{siteUrl}}/images/hero.jpg">
 <meta name="theme-color" content="#0d2340">
 
-<link rel="icon" type="image/svg+xml" href="{{root}}images/favicon.svg">
+<!--
+    Icons are the Eagle Eye mark (images/logo.png) centred on a white square.
+    There is deliberately no SVG icon: browsers prefer an SVG over every PNG
+    offered, and the mark is illustrated artwork that has not been vectorised,
+    so a stale SVG here would silently override all of these.
+-->
 <link rel="icon" type="image/png" sizes="32x32" href="{{root}}images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="{{root}}images/icon-192.png">
 <link rel="apple-touch-icon" href="{{root}}images/apple-touch-icon.png">
 
 <!--

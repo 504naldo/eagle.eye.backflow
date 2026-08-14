@@ -151,6 +151,35 @@ the same time — it currently states that the site sets no tracking cookies.
 
 ---
 
+## Logo and icons
+
+`images/logo.png` is the Eagle Eye eagle mark, used in the header, in the
+footer, and as the source for every icon. It was lifted from the company flyer
+and cleaned up: the flyer's water graphic was painted out of the bottom-left
+corner, and the page's off-white ground was normalised to pure white so the mark
+sits invisibly on the white masthead.
+
+Two consequences worth knowing:
+
+- **It is raster, at 228×268.** Ample for the header (38px), the footer (41px),
+  and the icons, but it will soften if used much larger. If the original vector
+  (AI, EPS, or SVG) turns up, drop it in and it will be sharper at any size.
+- **It needs a light background.** The eagle's head is white and its outlines
+  are navy, so on the dark footer it sits on a white tile rather than dissolving
+  into the ground. A proper reversed (light-on-dark) version of the artwork
+  would remove the need for that tile — that has to come from the designer, not
+  be faked from this file.
+
+Icons (`favicon-32.png`, `apple-touch-icon.png`, `icon-192.png`) are the mark
+centred on a white square. **There is deliberately no SVG favicon**: browsers
+prefer an SVG over every PNG on offer, so a stale or approximated SVG would
+silently override all of them. The previous placeholder `logo.svg` and
+`favicon.svg` — a generic shield and water droplet in the old palette — have
+been deleted.
+
+To regenerate the icons after replacing the logo, centre `images/logo.png` on a
+white square and export at 32px, 180px, and 192px.
+
 ## Fonts
 
 Barlow and Barlow Semi Condensed, self-hosted from `fonts/` (Latin subset,

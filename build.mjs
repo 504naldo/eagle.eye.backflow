@@ -236,7 +236,7 @@ function businessSchema() {
     telephone: '+1-604-283-3804',
     email: site.email,
     image: `${site.url}/images/hero.jpg`,
-    logo: `${site.url}/images/logo.svg`,
+    logo: `${site.url}/images/logo.png`,
     priceRange: '$$',
     areaServed: site.municipalities.map((m) => ({
       '@type': 'City',
