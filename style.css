@@ -50,6 +50,11 @@ ul {
     font-size: 0.9rem;
 }
 
+.call-bar a {
+    color: var(--white);
+    text-decoration: underline;
+}
+
 /* Navigation */
 header {
     background: var(--white);

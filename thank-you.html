@@ -12,18 +12,22 @@
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
+
+    <!-- @partial header -->
     <div class="call-bar">
-        Call or Text: <a href="tel:6042833804" style="color: var(--white); text-decoration: underline;">604‑283‑3804</a>
+        Call or Text: <a href="tel:6042833804">604‑283‑3804</a>
     </div>
+
     <header>
         <nav>
             <div class="logo">
                 <img src="images/logo.svg" alt="Eagle Eye Backflow logo" width="34" height="40">
                 Eagle&nbsp;Eye&nbsp;Backflow
             </div>
-            <button type="button" class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-list" onclick="toggleNav(this)">☰</button>
+            <button type="button" class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-list">☰</button>
             <ul id="nav-list">
                 <li><a href="index.html#home">Home</a></li>
                 <li><a href="index.html#services">Services</a></li>
@@ -33,20 +37,19 @@
             </ul>
         </nav>
     </header>
+    <!-- @endpartial -->
+
     <section style="text-align: center;">
         <h2>Thank You for Reaching Out!</h2>
         <p>Your request has been received. We’ll get back to you within 24 hours.</p>
         <p><a href="index.html" class="btn">Return Home</a></p>
     </section>
+
+    <!-- @partial footer -->
     <footer>
-        &copy; <span id="year"></span> Eagle Eye Backflow. All rights reserved.
+        &copy; <span id="year">2026</span> Eagle Eye Backflow. All rights reserved.
     </footer>
-    <script>
-        function toggleNav(toggleBtn) {
-            var isOpen = document.getElementById('nav-list').classList.toggle('nav-open');
-            toggleBtn.setAttribute('aria-expanded', isOpen);
-        }
-        document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
+    <!-- @endpartial -->
+
 </body>
 </html>

@@ -20,27 +20,33 @@
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
+
+    <!-- @partial header -->
     <div class="call-bar">
-        Call or Text: <a href="tel:6042833804" style="color: var(--white); text-decoration: underline;">604‑283‑3804</a>
+        Call or Text: <a href="tel:6042833804">604‑283‑3804</a>
     </div>
+
     <header>
         <nav>
             <div class="logo">
                 <img src="images/logo.svg" alt="Eagle Eye Backflow logo" width="34" height="40">
                 Eagle&nbsp;Eye&nbsp;Backflow
             </div>
-            <button type="button" class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-list" onclick="toggleNav(this)">☰</button>
+            <button type="button" class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-list">☰</button>
             <ul id="nav-list">
                 <li><a href="index.html#home">Home</a></li>
                 <li><a href="index.html#services">Services</a></li>
                 <li><a href="index.html#service-area">Service&nbsp;Area</a></li>
-                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="faq.html" aria-current="page">FAQ</a></li>
                 <li><a href="index.html#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
+    <!-- @endpartial -->
+
     <section>
         <h2>Frequently Asked Questions</h2>
         <div class="faq">
@@ -63,21 +69,19 @@
             <p>A Certified Backflow Assembly Tester is an individual who has received formal training in backflow testing, has been certified by the BC Water and Waste Association (BCWWA) and renews their certification annually.</p>
         </div>
     </section>
+
     <section>
         <h2>Have other questions?</h2>
         <p>If you didn’t find the answer you were looking for, feel free to get in touch. We’re always happy to help.</p>
         <p><strong>Email:</strong> <a href="mailto:eagle.eye.backflow@gmail.com">eagle.eye.backflow@gmail.com</a></p>
         <p><strong>Phone:</strong> <a href="tel:6042833804">604‑283‑3804</a></p>
     </section>
+
+    <!-- @partial footer -->
     <footer>
-        &copy; <span id="year"></span> Eagle Eye Backflow. All rights reserved.
+        &copy; <span id="year">2026</span> Eagle Eye Backflow. All rights reserved.
     </footer>
-    <script>
-        function toggleNav(toggleBtn) {
-            var isOpen = document.getElementById('nav-list').classList.toggle('nav-open');
-            toggleBtn.setAttribute('aria-expanded', isOpen);
-        }
-        document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
+    <!-- @endpartial -->
+
 </body>
 </html>
