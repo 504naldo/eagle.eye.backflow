@@ -91,6 +91,20 @@
                 and we will pick it up directly.
             </p>
 
+            <!--
+                Shown only when the booking request went through but the
+                attachment did not (see script.js). Hidden otherwise.
+            -->
+            <div class="notice" id="attachment-note" hidden>
+                <h2 class="notice__title">Your photo did not attach</h2>
+                <p>
+                    Your request reached us, so nothing is lost — but the file did not come
+                    with it. Please email it to
+                    <a href="mailto:eagle.eye.backflow@gmail.com" data-track="email-click" data-track-location="attachment-fallback">eagle.eye.backflow@gmail.com</a>
+                    and we will match it to your request.
+                </p>
+            </div>
+
             <div class="panel panel--quiet">
                 <h2 class="panel__title">What happens next</h2>
                 <ul class="ticklist">

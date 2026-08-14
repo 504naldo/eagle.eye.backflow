@@ -79,6 +79,15 @@
         year.textContent = new Date().getFullYear();
     }
 
+    /*
+     * The confirmation page explains a dropped attachment when the booking was
+     * resent without it.
+     */
+    var attachmentNote = document.getElementById('attachment-note');
+    if (attachmentNote && new URLSearchParams(window.location.search).get('attachment') === 'failed') {
+        attachmentNote.hidden = false;
+    }
+
     /* ---------------------------------------------------------------------- */
     /* Booking form                                                            */
     /* ---------------------------------------------------------------------- */
@@ -205,8 +214,12 @@
         }
     });
 
-    /** FormData minus empty file inputs, which some endpoints reject. */
-    function payload() {
+    /**
+     * FormData for the form. Empty file inputs are always dropped, since some
+     * endpoints reject them; `includeFile` also drops a chosen file, which is
+     * used for the retry below.
+     */
+    function payload(includeFile) {
         var data = new FormData();
         var hasFile = false;
 
@@ -214,7 +227,7 @@
             if (!el.name || el.disabled) return;
 
             if (el.type === 'file') {
-                if (el.files && el.files.length) {
+                if (includeFile && el.files && el.files.length) {
                     data.append(el.name, el.files[0]);
                     hasFile = true;
                 }
@@ -228,6 +241,39 @@
         return { data: data, hasFile: hasFile };
     }
 
+    function post(data) {
+        return fetch(form.action, {
+            method: form.method,
+            body: data,
+            headers: { Accept: 'application/json' }
+        }).then(function (response) {
+            if (!response.ok) {
+                throw new Error('Form endpoint responded with ' + response.status);
+            }
+            return response;
+        });
+    }
+
+    function succeed(query) {
+        track('form-submit', { location: 'booking-form' });
+        window.location.href = (form.dataset.success || 'thank-you.html') + (query || '');
+    }
+
+    function fail() {
+        /*
+         * Without this the visitor was left looking at an unchanged form with
+         * no idea the request had failed. Give them the phone number rather
+         * than asking them to try again blindly.
+         */
+        if (submitBtn) submitBtn.disabled = false;
+        setStatus(
+            'Your request could not be sent just now. Please call or text ' +
+            '604-283-3804, or email eagle.eye.backflow@gmail.com and we will pick it up.',
+            'error'
+        );
+        if (status) status.focus();
+    }
+
     form.addEventListener('submit', function (event) {
         event.preventDefault();
 
@@ -239,37 +285,38 @@
             return;
         }
 
-        var built = payload();
+        var built = payload(true);
 
         if (submitBtn) submitBtn.disabled = true;
         setStatus('Sending your request…', 'busy');
 
-        fetch(form.action, {
-            method: form.method,
-            body: built.data,
-            headers: { Accept: 'application/json' }
-        })
-            .then(function (response) {
-                if (!response.ok) {
-                    throw new Error('Form endpoint responded with ' + response.status);
-                }
-                track('form-submit', { location: 'booking-form' });
+        post(built.data)
+            .then(function () {
                 if (built.hasFile) track('file-upload', { location: 'booking-form' });
-                window.location.href = form.dataset.success || 'thank-you.html';
+                succeed();
             })
             .catch(function () {
                 /*
-                 * Without this the visitor was left looking at an unchanged form
-                 * with no idea the request had failed. Give them the phone
-                 * number rather than asking them to try again blindly.
+                 * Formspree accepts attachments only on its paid plans, so a
+                 * submission carrying a file can be rejected outright. The
+                 * enquiry itself matters far more than the photo, so rather
+                 * than losing the lead we resend without the attachment and
+                 * tell the visitor to email it instead.
+                 *
+                 * This also covers the harmless case of a transient network
+                 * failure on the first attempt.
                  */
-                if (submitBtn) submitBtn.disabled = false;
-                setStatus(
-                    'Your request could not be sent just now. Please call or text ' +
-                    '604-283-3804, or email eagle.eye.backflow@gmail.com and we will pick it up.',
-                    'error'
-                );
-                if (status) status.focus();
+                if (!built.hasFile) {
+                    fail();
+                    return;
+                }
+
+                track('file-upload-rejected', { location: 'booking-form' });
+                post(payload(false).data)
+                    .then(function () {
+                        succeed('?attachment=failed');
+                    })
+                    .catch(fail);
             });
     });
 })();
