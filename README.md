@@ -177,15 +177,34 @@ blocked or failed script can never leave the page blank, and
 
 ## Hero image
 
-`images/hero-backflow-*` is a real FEBCO 825Y reduced pressure zone assembly,
-taken from the company flyer and colour-graded so it sits on the dark hero: the
-pale water backdrop is blended toward `--ink-900` by a smooth luminance weight,
-and the edges fade to transparent so the panel dissolves into the page instead
-of ending on a rectangle.
+`images/hero-backflow-*` is the artwork supplied with the redesign reference: a
+brass assembly with blue ball valve handles, on dark navy, with water splashing
+around it. It is cropped out of the supplied screenshot — the page chrome down
+the right edge and the trust-indicator text at the bottom are detected by
+scanning the image, not guessed at — and its edges fade to transparent so the
+panel dissolves into the hero rather than ending on a rectangle.
 
-The equipment itself is untouched beyond a contrast lift — no markings were
-added, removed, or invented, and the grading deliberately protects the brass and
-the blue handle so the assembly stays technically credible.
+Above 1200px the image runs out to the viewport edge instead of stopping at the
+content column, which is what gives it presence. `.hero` is `overflow: hidden`,
+so that can never produce a horizontal scrollbar.
+
+> **The embossed markings on this device are garbled rather than real
+> lettering**, which is characteristic of a generated image. A backflow
+> professional looking closely would notice. The brief asked that equipment read
+> as technically credible, so it is called out here rather than left to be
+> found.
+>
+> The alternative is in git history: commit `ff4b137` carries a **real FEBCO
+> 825Y** photographed for the company flyer, colour-graded onto the dark ground
+> with its markings intact. To go back to it:
+>
+> ```sh
+> git checkout ff4b137 -- images/hero-backflow-640.avif images/hero-backflow-640.webp \
+>   images/hero-backflow-960.avif images/hero-backflow-960.webp images/hero-backflow.png
+> ```
+>
+> then point the `<picture>` in `index.html` at the 640/960 filenames and set
+> the `<img>` dimensions to 960×763.
 
 Served as AVIF with WebP and PNG fallbacks at two widths through `<picture>`.
 The PNG keeps the alpha edge-fade for browsers without either modern format.

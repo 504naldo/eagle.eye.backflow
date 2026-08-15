@@ -613,8 +613,8 @@ p { text-wrap: pretty; }
     z-index: 1;
     display: grid;
     /* Wide enough that the two hero CTAs sit on one line at desktop widths. */
-    grid-template-columns: minmax(0, 1.18fr) minmax(0, 1fr);
-    gap: clamp(2rem, 1rem + 3.5vw, 4rem);
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+    gap: clamp(1.75rem, 1rem + 2.5vw, 3rem);
     align-items: center;
     padding-top: clamp(2.75rem, 2rem + 4vw, 5rem);
     padding-bottom: clamp(2.75rem, 2rem + 4vw, 5rem);
@@ -642,6 +642,18 @@ p { text-wrap: pretty; }
 .hero__media img {
     width: 100%;
     height: auto;
+}
+
+/*
+ * On wide screens the artwork runs out to the viewport edge rather than
+ * stopping at the content column, which gives it the presence the design
+ * wants. `.hero` is overflow:hidden, so this can never cause a scrollbar.
+ * Below this width it stays inside the column.
+ */
+@media (min-width: 1200px) {
+    .hero__media {
+        margin-right: calc((var(--wrap) - 100vw) / 2 - 1.25rem);
+    }
 }
 
 /* Understated trust indicators — a quiet row, not four cards. */
