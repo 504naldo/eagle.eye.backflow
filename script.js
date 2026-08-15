@@ -52,6 +52,41 @@
     });
 
     /* ---------------------------------------------------------------------- */
+    /* Scroll reveal                                                           */
+    /* ---------------------------------------------------------------------- */
+
+    /*
+     * The hidden state lives behind `.has-js`, set here, so a failed or blocked
+     * script can never leave the page blank. Elements already in view on load
+     * are revealed immediately rather than animating in.
+     */
+    var revealables = document.querySelectorAll('[data-reveal]');
+
+    if (revealables.length) {
+        document.documentElement.classList.add('has-js');
+
+        var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        if (reduced || typeof IntersectionObserver !== 'function') {
+            Array.prototype.forEach.call(revealables, function (el) {
+                el.classList.add('is-in');
+            });
+        } else {
+            var observer = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (!entry.isIntersecting) return;
+                    entry.target.classList.add('is-in');
+                    observer.unobserve(entry.target);
+                });
+            }, { rootMargin: '0px 0px -8% 0px', threshold: 0.06 });
+
+            Array.prototype.forEach.call(revealables, function (el) {
+                observer.observe(el);
+            });
+        }
+    }
+
+    /* ---------------------------------------------------------------------- */
     /* Navigation                                                              */
     /* ---------------------------------------------------------------------- */
 

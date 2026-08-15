@@ -12,7 +12,13 @@
 <header class="masthead">
     <div class="wrap masthead__inner">
         <a class="brand" href="{{root}}index.html">
-            <img src="{{root}}images/logo.png" alt="" width="38" height="45" aria-hidden="true">
+            <!--
+                The mark is drawn for light grounds, so on the dark header it
+                sits on a light tile rather than dissolving into it.
+            -->
+            <span class="brand__mark">
+                <img src="{{root}}images/logo.png" alt="Eagle Eye Backflow Services" width="39" height="46">
+            </span>
             <span class="brand__name">Eagle&nbsp;Eye <span class="brand__sub">Backflow Services</span></span>
         </a>
 
@@ -24,9 +30,10 @@
         <nav class="site-nav" id="site-nav" aria-label="Main">
             <ul class="site-nav__list">
                 <li><a href="{{root}}index.html#services"{{nav_services}}>Services</a></li>
+                <li><a href="{{root}}index.html#why-us"{{nav_why}}>Why Us</a></li>
+                <li><a href="{{root}}index.html#who-we-serve"{{nav_serve}}>Who We Serve</a></li>
                 <li><a href="{{root}}service-areas.html"{{nav_areas}}>Service Areas</a></li>
-                <li><a href="{{root}}index.html#property-managers"{{nav_pm}}>Property Managers</a></li>
-                <li><a href="{{root}}faq.html"{{nav_faq}}>FAQ</a></li>
+                <li><a href="{{root}}faq.html"{{nav_resources}}>Resources</a></li>
                 <li class="site-nav__cta">
                     <a class="btn btn--primary btn--sm" href="{{root}}contact.html" data-track="cta-click" data-track-location="nav">Book My Test</a>
                 </li>

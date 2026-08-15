@@ -44,11 +44,11 @@ const PAGES = {
   'index.html': {
     url: '/',
     nav: 'home',
-    title: 'Backflow Testing Greater Vancouver | Certified Tester | Eagle Eye Backflow',
+    title: 'Backflow Testing & Repair Greater Vancouver | Eagle Eye Backflow Services',
     description:
-      'Certified backflow testing and repair across Greater Vancouver. We test your ' +
-      'device, submit the required documentation, and repair many failures during the ' +
-      'same visit. Call or text 604-283-3804.',
+      'Certified backflow testing, repair, and report submission across Greater ' +
+      'Vancouver. We test your backflow preventer, file the required documentation for ' +
+      'you, and complete many repairs during the same visit. Call or text 604-283-3804.',
     priority: '1.0',
   },
   'service-areas.html': {
@@ -107,6 +107,7 @@ const PARTIAL_FILES = {
   mobileCta: 'mobile-cta.html',
   bookingForm: 'booking-form.html',
   reviews: 'reviews.html',
+  icons: 'icons.html',
 };
 
 /* -------------------------------------------------------------------------- */
@@ -195,10 +196,10 @@ function baseValues(rootPrefix) {
 
     // Nav highlighting — overwritten per page below.
     nav_services: '',
+    nav_why: '',
+    nav_serve: '',
     nav_areas: '',
-    nav_pm: '',
-    nav_faq: '',
-    nav_contact: '',
+    nav_resources: '',
   };
 }
 
@@ -207,10 +208,10 @@ const ARIA_CURRENT = ' aria-current="page"';
 function navValues(current) {
   return {
     nav_services: '',
+    nav_why: '',
+    nav_serve: '',
     nav_areas: current === 'areas' ? ARIA_CURRENT : '',
-    nav_pm: '',
-    nav_faq: current === 'faq' ? ARIA_CURRENT : '',
-    nav_contact: current === 'contact' ? ARIA_CURRENT : '',
+    nav_resources: current === 'faq' ? ARIA_CURRENT : '',
   };
 }
 
@@ -235,7 +236,7 @@ function businessSchema() {
     url: `${site.url}/`,
     telephone: '+1-604-283-3804',
     email: site.email,
-    image: `${site.url}/images/hero.jpg`,
+    image: `${site.url}/images/og-card.jpg`,
     logo: `${site.url}/images/logo.png`,
     priceRange: '$$',
     areaServed: site.municipalities.map((m) => ({

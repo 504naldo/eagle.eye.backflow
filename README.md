@@ -151,6 +151,45 @@ the same time — it currently states that the site sets no tracking cookies.
 
 ---
 
+## Design system
+
+The site chrome and the homepage are dark; the interior pages keep a light body
+under the same dark header and footer.
+
+Colour lives in the `:root` block at the top of `style.css`. Blue is reserved
+for action — buttons, icons, small labels, dividers, hover states — and is never
+used as a large fill. On the dark sections, body links step up from `--blue`
+(`#1267D6`, only 3.6:1 on the deep ground) to `--accent` (`#2494FF`) to hold
+WCAG AA.
+
+Type is **Barlow Semi Condensed** for headings, labels, and buttons, and
+**Barlow** for body — a signage grotesk rather than the usual Inter/Poppins
+default. Both are self-hosted; see the Fonts section below.
+
+Icons are a single inline SVG sprite (`_partials/icons.html`), referenced as
+`<svg><use href="#i-name"></svg>`. Stroke colour and size come from CSS, so one
+definition serves every size and surface. No icon font, no icon library.
+
+Motion is limited to a fade-and-lift on scroll (`data-reveal`) and hover states.
+The hidden state is guarded behind a `.has-js` class that `script.js` sets, so a
+blocked or failed script can never leave the page blank, and
+`prefers-reduced-motion` disables it outright.
+
+## Hero image
+
+`images/hero-backflow-*` is a real FEBCO 825Y reduced pressure zone assembly,
+taken from the company flyer and colour-graded so it sits on the dark hero: the
+pale water backdrop is blended toward `--ink-900` by a smooth luminance weight,
+and the edges fade to transparent so the panel dissolves into the page instead
+of ending on a rectangle.
+
+The equipment itself is untouched beyond a contrast lift — no markings were
+added, removed, or invented, and the grading deliberately protects the brass and
+the blue handle so the assembly stays technically credible.
+
+Served as AVIF with WebP and PNG fallbacks at two widths through `<picture>`.
+The PNG keeps the alpha edge-fade for browsers without either modern format.
+
 ## Logo and icons
 
 `images/logo.png` is the Eagle Eye eagle mark, used in the header, in the

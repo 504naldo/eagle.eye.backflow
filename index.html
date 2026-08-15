@@ -4,23 +4,25 @@
 <!-- @partial head -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Backflow Testing Greater Vancouver | Certified Tester | Eagle Eye Backflow</title>
-<meta name="description" content="Certified backflow testing and repair across Greater Vancouver. We test your device, submit the required documentation, and repair many failures during the same visit. Call or text 604-283-3804.">
+<title>Backflow Testing &amp; Repair Greater Vancouver | Eagle Eye Backflow Services</title>
+<meta name="description" content="Certified backflow testing, repair, and report submission across Greater Vancouver. We test your backflow preventer, file the required documentation for you, and complete many repairs during the same visit. Call or text 604-283-3804.">
 <link rel="canonical" href="https://eagleeyebackflow.ca/">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Eagle Eye Backflow Services">
 <meta property="og:locale" content="en_CA">
-<meta property="og:title" content="Backflow Testing Greater Vancouver | Certified Tester | Eagle Eye Backflow">
-<meta property="og:description" content="Certified backflow testing and repair across Greater Vancouver. We test your device, submit the required documentation, and repair many failures during the same visit. Call or text 604-283-3804.">
+<meta property="og:title" content="Backflow Testing &amp; Repair Greater Vancouver | Eagle Eye Backflow Services">
+<meta property="og:description" content="Certified backflow testing, repair, and report submission across Greater Vancouver. We test your backflow preventer, file the required documentation for you, and complete many repairs during the same visit. Call or text 604-283-3804.">
 <meta property="og:url" content="https://eagleeyebackflow.ca/">
-<meta property="og:image" content="https://eagleeyebackflow.ca/images/hero.jpg">
-<meta property="og:image:alt" content="Eagle Eye Backflow Services — certified backflow testing across Greater Vancouver">
+<meta property="og:image" content="https://eagleeyebackflow.ca/images/og-card.jpg">
+<meta property="og:image:alt" content="A backflow prevention assembly — Eagle Eye Backflow Services, certified backflow testing across Greater Vancouver">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Backflow Testing Greater Vancouver | Certified Tester | Eagle Eye Backflow">
-<meta name="twitter:description" content="Certified backflow testing and repair across Greater Vancouver. We test your device, submit the required documentation, and repair many failures during the same visit. Call or text 604-283-3804.">
-<meta name="twitter:image" content="https://eagleeyebackflow.ca/images/hero.jpg">
-<meta name="theme-color" content="#0d2340">
+<meta name="twitter:title" content="Backflow Testing &amp; Repair Greater Vancouver | Eagle Eye Backflow Services">
+<meta name="twitter:description" content="Certified backflow testing, repair, and report submission across Greater Vancouver. We test your backflow preventer, file the required documentation for you, and complete many repairs during the same visit. Call or text 604-283-3804.">
+<meta name="twitter:image" content="https://eagleeyebackflow.ca/images/og-card.jpg">
+<meta name="theme-color" content="#06111D">
 
 <!--
     Icons are the Eagle Eye mark (images/logo.png) centred on a white square.
@@ -43,8 +45,6 @@
 <script src="script.js" defer></script>
 <!-- @endpartial -->
 
-<link rel="preload" as="image" href="images/hero.jpg" fetchpriority="high">
-
 <!-- @partial businessSchema -->
 <script type="application/ld+json">
 {
@@ -56,7 +56,7 @@
     "url": "https://eagleeyebackflow.ca/",
     "telephone": "+1-604-283-3804",
     "email": "eagle.eye.backflow@gmail.com",
-    "image": "https://eagleeyebackflow.ca/images/hero.jpg",
+    "image": "https://eagleeyebackflow.ca/images/og-card.jpg",
     "logo": "https://eagleeyebackflow.ca/images/logo.png",
     "priceRange": "$$",
     "areaServed": [
@@ -200,7 +200,13 @@
 <header class="masthead">
     <div class="wrap masthead__inner">
         <a class="brand" href="index.html">
-            <img src="images/logo.png" alt="" width="38" height="45" aria-hidden="true">
+            <!--
+                The mark is drawn for light grounds, so on the dark header it
+                sits on a light tile rather than dissolving into it.
+            -->
+            <span class="brand__mark">
+                <img src="images/logo.png" alt="Eagle Eye Backflow Services" width="39" height="46">
+            </span>
             <span class="brand__name">Eagle&nbsp;Eye <span class="brand__sub">Backflow Services</span></span>
         </a>
 
@@ -212,9 +218,10 @@
         <nav class="site-nav" id="site-nav" aria-label="Main">
             <ul class="site-nav__list">
                 <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#why-us">Why Us</a></li>
+                <li><a href="index.html#who-we-serve">Who We Serve</a></li>
                 <li><a href="service-areas.html">Service Areas</a></li>
-                <li><a href="index.html#property-managers">Property Managers</a></li>
-                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="faq.html">Resources</a></li>
                 <li class="site-nav__cta">
                     <a class="btn btn--primary btn--sm" href="contact.html" data-track="cta-click" data-track-location="nav">Book My Test</a>
                 </li>
@@ -224,262 +231,291 @@
 </header>
 <!-- @endpartial -->
 
+<!-- @partial icons -->
+<!--
+    Icon sprite. Defined once, referenced with <svg><use href="#i-name"></svg>.
+    Stroke colour and size come from CSS, so one definition serves every size
+    and surface. No icon font, no icon library.
+-->
+<svg class="icon-sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="i-shield-check" viewBox="0 0 24 24">
+        <path d="M12 3l7.5 3v5.5c0 4.6-3.1 8.4-7.5 10.2C7.6 19.9 4.5 16.1 4.5 11.5V6z"/>
+        <path d="M9 12.2l2.2 2.2L15.4 10"/>
+    </symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24">
+        <path d="M12 3l7.5 3v5.5c0 4.6-3.1 8.4-7.5 10.2C7.6 19.9 4.5 16.1 4.5 11.5V6z"/>
+    </symbol>
+    <symbol id="i-document" viewBox="0 0 24 24">
+        <path d="M14 3H8a1.5 1.5 0 0 0-1.5 1.5v15A1.5 1.5 0 0 0 8 21h8a1.5 1.5 0 0 0 1.5-1.5V6.5z"/>
+        <path d="M14 3v3.5h3.5"/>
+        <path d="M9.5 12.5h5M9.5 16h5"/>
+    </symbol>
+    <symbol id="i-wrench" viewBox="0 0 24 24">
+        <path d="M15.2 4.5a4.6 4.6 0 0 0-5.6 5.9L4 16l4 4 5.6-5.6a4.6 4.6 0 0 0 5.9-5.6l-2.9 2.9-2.6-.7-.7-2.6z"/>
+    </symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="8.2"/>
+        <path d="M12 7.4V12l3.1 1.9"/>
+    </symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24">
+        <path d="M12 21.5s6.6-6 6.6-10.5a6.6 6.6 0 1 0-13.2 0C5.4 15.5 12 21.5 12 21.5z"/>
+        <circle cx="12" cy="10.8" r="2.4"/>
+    </symbol>
+    <symbol id="i-tag" viewBox="0 0 24 24">
+        <path d="M20 12.4 12.6 5H5v7.6L12.4 20a1.4 1.4 0 0 0 2 0l5.6-5.6a1.4 1.4 0 0 0 0-2z"/>
+        <circle cx="8.8" cy="8.8" r="1.2"/>
+    </symbol>
+    <symbol id="i-gauge" viewBox="0 0 24 24">
+        <path d="M4.2 17a8.4 8.4 0 1 1 15.6 0"/>
+        <path d="M12 17l3.6-4.4"/>
+        <circle cx="12" cy="17" r="1.1"/>
+    </symbol>
+    <symbol id="i-refresh" viewBox="0 0 24 24">
+        <path d="M20 12a8 8 0 1 1-2.6-5.9"/>
+        <path d="M20 4.5V10h-5.5"/>
+    </symbol>
+    <symbol id="i-building" viewBox="0 0 24 24">
+        <path d="M4 21V6.5L12 3l8 3.5V21"/>
+        <path d="M4 21h16"/>
+        <path d="M9.5 21v-5h5v5"/>
+        <path d="M8.5 10.5h2M13.5 10.5h2"/>
+    </symbol>
+    <symbol id="i-home" viewBox="0 0 24 24">
+        <path d="M4 10.8 12 4l8 6.8V20a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1z"/>
+        <path d="M9.5 21v-6.5h5V21"/>
+    </symbol>
+    <symbol id="i-upload" viewBox="0 0 24 24">
+        <path d="M12 16V4"/>
+        <path d="M7.5 8.5 12 4l4.5 4.5"/>
+        <path d="M4.5 15v3.5A1.5 1.5 0 0 0 6 20h12a1.5 1.5 0 0 0 1.5-1.5V15"/>
+    </symbol>
+</svg>
+<!-- @endpartial -->
+
 <main id="main">
 
     <!-- ===== Hero ===================================================== -->
     <section class="hero" id="home">
         <div class="wrap hero__inner">
-            <p class="eyebrow eyebrow--light">Backflow Test Due?</p>
-            <h1>Certified Backflow Testing Across Greater Vancouver</h1>
-            <p class="hero__lede">
-                We test your backflow preventer, handle the required documentation,
-                and can complete many repairs during the same visit.
-            </p>
-            <div class="cta-row">
-                <a class="btn btn--primary btn--lg" href="contact.html"
-                   data-track="cta-click" data-track-location="hero">Book My Backflow Test</a>
-                <a class="btn btn--ghost btn--lg" href="tel:+16042833804"
-                   data-track="phone-click" data-track-location="hero">Call / Text 604-283-3804</a>
+            <div class="hero__copy">
+                <p class="eyebrow">Backflow Test Due?</p>
+                <h1>Certified Backflow Testing Across Greater Vancouver</h1>
+                <p class="hero__lede">
+                    We test your backflow preventer, handle the required documentation,
+                    and can complete many repairs during the same visit.
+                </p>
+
+                <div class="cta-row">
+                    <a class="btn btn--primary btn--lg" href="contact.html"
+                       data-track="cta-click" data-track-location="hero">Book My Backflow Test</a>
+                    <a class="btn btn--ghost btn--lg" href="tel:+16042833804"
+                       data-track="phone-click" data-track-location="hero">Call / Text 604-283-3804</a>
+                </div>
+
+                <ul class="trust-row">
+                    <li>
+                        <svg aria-hidden="true"><use href="#i-shield-check"></use></svg>
+                        BCWWA Certified Tester
+                    </li>
+                    <li>
+                        <svg aria-hidden="true"><use href="#i-shield"></use></svg>
+                        Insured
+                    </li>
+                    <li>
+                        <svg aria-hidden="true"><use href="#i-document"></use></svg>
+                        Report Submission Included
+                    </li>
+                    <li>
+                        <svg aria-hidden="true"><use href="#i-wrench"></use></svg>
+                        Same-Visit Repairs
+                    </li>
+                </ul>
             </div>
-            <ul class="trust-row">
-                <li>BCWWA Certified Tester</li>
-                <li>Insured</li>
-                <li>Report Submission Included</li>
-                <li>Same-Visit Repairs</li>
-            </ul>
+
+            <div class="hero__media">
+                <picture>
+                    <source type="image/avif"
+                            srcset="images/hero-backflow-640.avif 640w, images/hero-backflow-960.avif 960w"
+                            sizes="(max-width: 900px) 92vw, 46vw">
+                    <source type="image/webp"
+                            srcset="images/hero-backflow-640.webp 640w, images/hero-backflow-960.webp 960w"
+                            sizes="(max-width: 900px) 92vw, 46vw">
+                    <img src="images/hero-backflow.png" width="960" height="763"
+                         alt="A FEBCO 825Y reduced pressure zone backflow assembly, with brass test cocks and blue ball valve handles."
+                         fetchpriority="high" decoding="async">
+                </picture>
+            </div>
         </div>
     </section>
 
-    <!-- ===== Google reviews =========================================== -->
-    <!-- @partial reviews -->
-    <!--
-        Google review section — intentionally not rendered.
-
-        No rating, review count, or customer quote is invented here. To turn this
-        section on: open _data/site.mjs, set reviews.enabled to true, fill in the
-        real rating, count, profile URL, and featured quotes from the Google
-        Business Profile, then run `node build.mjs`.
-
-        The markup itself lives in _partials/reviews.html.
-    -->
-    <!-- @endpartial -->
-
-    <!-- ===== Why Eagle Eye ============================================ -->
-    <section class="pillars" aria-labelledby="pillars-heading">
+    <!-- ===== Process bar ============================================== -->
+    <section class="trustbar" aria-labelledby="trustbar-heading">
         <div class="wrap">
-            <h2 class="sr-only" id="pillars-heading">Why choose Eagle Eye</h2>
-            <div class="pillars__grid">
-                <div class="pillar">
-                    <span class="pillar__num">01</span>
+            <h2 class="sr-only" id="trustbar-heading">What working with Eagle Eye involves</h2>
+            <div class="trustbar__grid">
+                <div class="trustbar__item" data-reveal>
+                    <span class="trustbar__num">01</span>
                     <h3>BCWWA Certified</h3>
-                    <p>Professional testing from a qualified backflow tester.</p>
+                    <p>A certified tester who works to the requirements of the local authority.</p>
                 </div>
-                <div class="pillar">
-                    <span class="pillar__num">02</span>
+                <div class="trustbar__item" data-reveal>
+                    <span class="trustbar__num">02</span>
                     <h3>Reports Filed for You</h3>
-                    <p>We handle the required documentation and the municipal submission process.</p>
+                    <p>We take care of the documentation and the submission on your behalf.</p>
                 </div>
-                <div class="pillar">
-                    <span class="pillar__num">03</span>
+                <div class="trustbar__item" data-reveal>
+                    <span class="trustbar__num">03</span>
                     <h3>Repairs on the Same Visit</h3>
-                    <p>Many common deficiencies can be repaired and retested without a second appointment.</p>
+                    <p>Many common repairs can be completed during the same appointment.</p>
                 </div>
-                <div class="pillar">
-                    <span class="pillar__num">04</span>
+                <div class="trustbar__item" data-reveal>
+                    <span class="trustbar__num">04</span>
                     <h3>No Payment Until Complete</h3>
-                    <p>You pay once the work is done. No deposit, no friction.</p>
+                    <p>You pay once the work is done. We aim to leave the device compliant and back in service.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- ===== Services ================================================= -->
-    <section class="section" id="services" aria-labelledby="services-heading">
+    <section class="section--dark" id="services" aria-labelledby="services-heading">
         <div class="wrap">
-            <p class="eyebrow">What We Do</p>
-            <h2 class="section__title" id="services-heading">Backflow testing, repair, and the paperwork that follows</h2>
+            <p class="eyebrow">Services</p>
+            <h2 class="section__title" id="services-heading">Backflow Services Without the Runaround</h2>
             <p class="section__intro">
-                One tester for the whole job — the test itself, the repair if the device
-                fails, the retest, and the documentation your municipality expects.
+                Testing, repairs, documentation, and submission — one company handling the
+                full process, so you are not chasing a tester, a plumber, and a city form
+                separately.
             </p>
 
-            <div class="service-list">
-                <article class="service-item">
+            <div class="svc-grid">
+                <article class="svc-card" data-reveal>
+                    <span class="svc-card__icon"><svg aria-hidden="true"><use href="#i-gauge"></use></svg></span>
                     <h3>Annual Backflow Testing</h3>
-                    <p>
-                        Backflow prevention assemblies need testing on a set schedule to confirm
-                        they still hold. We complete the required test on every device at the
-                        property and produce the documentation that goes with it.
-                    </p>
+                    <p>The required test on every assembly at the property, carried out by a certified tester and fully documented.</p>
                 </article>
 
-                <article class="service-item">
-                    <h3>Backflow Repair</h3>
-                    <p>
-                        Fouled check valves, worn relief valves, and perished seals are the usual
-                        causes of a failed test. We troubleshoot the assembly and repair it rather
-                        than defaulting to a full replacement.
-                    </p>
+                <article class="svc-card" data-reveal>
+                    <span class="svc-card__icon"><svg aria-hidden="true"><use href="#i-wrench"></use></svg></span>
+                    <h3>Backflow Repairs</h3>
+                    <p>Fouled checks, worn relief valves, and perished seals troubleshot and repaired, including minor parts replacement.</p>
                 </article>
 
-                <article class="service-item">
+                <article class="svc-card" data-reveal>
+                    <span class="svc-card__icon"><svg aria-hidden="true"><use href="#i-refresh"></use></svg></span>
                     <h3>Retesting &amp; Certification</h3>
-                    <p>
-                        A device that fails has to pass before it is compliant. Where we repair on
-                        site, we retest on site, so the visit ends with a working assembly and a
-                        completed report.
-                    </p>
+                    <p>A device that fails has to pass before it is compliant. Where we repair on site, we retest on site.</p>
                 </article>
 
-                <article class="service-item">
+                <article class="svc-card" data-reveal>
+                    <span class="svc-card__icon"><svg aria-hidden="true"><use href="#i-upload"></use></svg></span>
                     <h3>Report Submission</h3>
-                    <p>
-                        Reporting requirements vary by municipality. Eagle Eye submits the required test documentation through the applicable municipal reporting system on your behalf. You do not need to learn how your city's system works.
-                    </p>
+                    <p>Reporting requirements vary by municipality. Eagle Eye submits the required test documentation through the applicable municipal reporting system on your behalf.</p>
                 </article>
 
-                <article class="service-item">
-                    <h3>Commercial Backflow Service</h3>
-                    <p>
-                        Restaurants, retail, strata corporations, office and industrial buildings,
-                        and multi-family properties — including sites with several assemblies that
-                        need testing and documenting individually.
-                    </p>
+                <article class="svc-card" data-reveal>
+                    <span class="svc-card__icon"><svg aria-hidden="true"><use href="#i-building"></use></svg></span>
+                    <h3>Commercial &amp; Strata</h3>
+                    <p>Restaurants, retail, offices, industrial and multi-family buildings — including sites with several assemblies to document individually.</p>
                 </article>
 
-                <article class="service-item">
-                    <h3>Residential Backflow Service</h3>
-                    <p>
-                        Qualifying residential assemblies and irrigation systems, tested and
-                        documented the same way. Irrigation is tested once the system is charged
-                        for the season.
-                    </p>
+                <article class="svc-card" data-reveal>
+                    <span class="svc-card__icon"><svg aria-hidden="true"><use href="#i-home"></use></svg></span>
+                    <h3>Residential</h3>
+                    <p>Qualifying residential assemblies and irrigation systems, tested and documented the same way.</p>
                 </article>
             </div>
         </div>
     </section>
 
-    <!-- ===== Process ================================================== -->
-    <section class="section section--mist" id="how-it-works" aria-labelledby="process-heading">
+    <!-- ===== Why us =================================================== -->
+    <section class="section--deep" id="why-us" aria-labelledby="why-heading">
         <div class="wrap">
-            <p class="eyebrow">How It Works</p>
-            <h2 class="section__title" id="process-heading">Tell us which property needs testing</h2>
-            <p class="section__intro">
-                Four steps, and three of them are ours.
-            </p>
+            <p class="eyebrow">Why Eagle Eye</p>
+            <h2 class="section__title" id="why-heading">Why Property Owners Choose Eagle Eye</h2>
 
-            <ol class="steps">
-                <li class="step">
-                    <h3>Contact Eagle Eye</h3>
-                    <p>Call, text, or send the booking form with the property address. A photo of the device or your municipal notice helps us quote accurately.</p>
-                </li>
-                <li class="step">
-                    <h3>We Test Your Device</h3>
-                    <p>A certified tester attends and completes the required backflow test on every assembly at the address.</p>
-                </li>
-                <li class="step">
-                    <h3>Repairs If Required</h3>
-                    <p>If the device fails, we tell you what is wrong and what it costs. Many common issues are repaired and retested during the same visit.</p>
-                </li>
-                <li class="step">
-                    <h3>We Handle the Paperwork</h3>
-                    <p>Reporting requirements vary by municipality. Eagle Eye submits the required test documentation through the applicable municipal reporting system on your behalf.</p>
-                </li>
-            </ol>
-
-            <p class="steps__close">You receive confirmation, and you're done.</p>
+            <div class="why-grid">
+                <div class="why-row" data-reveal>
+                    <svg aria-hidden="true"><use href="#i-shield-check"></use></svg>
+                    <div>
+                        <h3>Certified Backflow Tester</h3>
+                        <p>Testing carried out by a BCWWA certified tester.</p>
+                    </div>
+                </div>
+                <div class="why-row" data-reveal>
+                    <svg aria-hidden="true"><use href="#i-clock"></use></svg>
+                    <div>
+                        <h3>Fast, Dependable Service</h3>
+                        <p>Scheduled around the property's access, and done when we say we will.</p>
+                    </div>
+                </div>
+                <div class="why-row" data-reveal>
+                    <svg aria-hidden="true"><use href="#i-document"></use></svg>
+                    <div>
+                        <h3>Clear Reporting &amp; Documentation</h3>
+                        <p>You get a straight answer on what passed, what failed, and what was done.</p>
+                    </div>
+                </div>
+                <div class="why-row" data-reveal>
+                    <svg aria-hidden="true"><use href="#i-tag"></use></svg>
+                    <div>
+                        <h3>Competitive Pricing</h3>
+                        <p>Quoted on the actual device, and confirmed before any work begins.</p>
+                    </div>
+                </div>
+                <div class="why-row" data-reveal>
+                    <svg aria-hidden="true"><use href="#i-pin"></use></svg>
+                    <div>
+                        <h3>Serving Greater Vancouver</h3>
+                        <p>Across the Lower Mainland daily, from downtown towers to Delta farmland.</p>
+                    </div>
+                </div>
+                <div class="why-row" data-reveal>
+                    <svg aria-hidden="true"><use href="#i-wrench"></use></svg>
+                    <div>
+                        <h3>Same-Visit Repair Capability</h3>
+                        <p>Common parts on the van, so a failure often does not mean a second appointment.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- ===== Who we serve ============================================= -->
-    <section class="section" id="who-we-serve" aria-labelledby="serve-heading">
+    <section class="section--dark" id="who-we-serve" aria-labelledby="serve-heading">
         <div class="wrap">
             <p class="eyebrow">Who We Serve</p>
             <h2 class="section__title" id="serve-heading">From a single device to a whole portfolio</h2>
+            <p class="section__intro">
+                Eagle Eye works for the people responsible for keeping a property compliant —
+                whether that is one restaurant owner or a manager with buildings in four
+                municipalities.
+            </p>
 
-            <ul class="segments">
-                <li>Strata corporations</li>
-                <li>Property managers</li>
+            <ul class="serve-grid" data-reveal>
                 <li>Restaurants</li>
-                <li>Commercial buildings</li>
-                <li>Retail locations</li>
-                <li>Multi-family buildings</li>
-                <li>Industrial properties</li>
-                <li>Residential customers</li>
+                <li>Strata Properties</li>
+                <li>Commercial Buildings</li>
+                <li>Retail Sites</li>
+                <li>Multi-Family Properties</li>
+                <li>Residential Clients</li>
+                <li>Property Managers</li>
+                <li>Facilities Managers</li>
             </ul>
-
-            <div class="pm-panel" id="property-managers">
-                <div>
-                    <p class="eyebrow eyebrow--light">Property Managers &amp; Strata</p>
-                    <h2>One tester. Multiple properties. Less administration.</h2>
-                    <p>
-                        Eagle Eye can coordinate annual backflow testing across multiple
-                        properties, complete repairs where required, and handle report
-                        submission for the whole portfolio.
-                    </p>
-                    <ul class="pm-panel__points">
-                        <li>Testing grouped by route, so fewer visits and less coordination on your end</li>
-                        <li>We work to your access procedures and deal with caretakers directly</li>
-                        <li>Documentation submitted per property, in the form your records need</li>
-                        <li>A reminder when each property is due again</li>
-                    </ul>
-                </div>
-                <div>
-                    <a class="btn btn--primary btn--lg" href="contact.html?service=multi"
-                       data-track="cta-click" data-track-location="property-managers">Request Multi-Property Service</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== Pricing ================================================== -->
-    <section class="section section--mist" id="pricing" aria-labelledby="pricing-heading">
-        <div class="wrap pricing">
-            <div>
-                <p class="eyebrow">Pricing</p>
-                <h2 class="section__title" id="pricing-heading">Straightforward backflow testing pricing</h2>
-                <p>
-                    Every installation is slightly different — the number of assemblies, their
-                    size and type, and how easy they are to reach all move the number. Rather
-                    than publish a figure that turns out not to apply to you, we quote on the
-                    actual device.
-                </p>
-                <ul class="pricing__points">
-                    <li>Send a photo of the device, your municipal notice, or a previous test report.</li>
-                    <li>We come back with clear pricing before any work begins.</li>
-                    <li>If the device fails, you hear the repair cost before we proceed.</li>
-                    <li>You do not pay until the work is complete.</li>
-                </ul>
-                <div class="cta-row">
-                    <a class="btn btn--primary btn--lg" href="contact.html"
-                       data-track="cta-click" data-track-location="pricing">Get My Price</a>
-                </div>
-            </div>
-
-            <div class="panel">
-                <h2 class="panel__title">What helps us quote accurately</h2>
-                <ul class="ticklist">
-                    <li>A photo of the backflow assembly and its nameplate</li>
-                    <li>The municipal notice, if you received one</li>
-                    <li>Your previous test report, if you have it</li>
-                    <li>How many devices are on the property</li>
-                    <li>Where the device is and how to get to it</li>
-                </ul>
-                <p class="panel__note">Not sure about any of it? Send the address and we will work the rest out.</p>
-            </div>
         </div>
     </section>
 
     <!-- ===== Service areas ============================================ -->
-    <section class="section" id="service-areas" aria-labelledby="areas-heading">
+    <section class="section--deep" id="service-areas" aria-labelledby="areas-heading">
         <div class="wrap">
             <p class="eyebrow">Where We Work</p>
-            <h2 class="section__title" id="areas-heading">Backflow testing across Greater Vancouver</h2>
+            <h2 class="section__title" id="areas-heading">Serving Greater Vancouver</h2>
             <p class="section__intro">
-                Based in the Lower Mainland and working across it daily. If your community
-                is nearby but not listed, ask — we will tell you straight away.
+                Backflow assemblies do not look the same from one part of the region to the
+                next, and knowing the local building stock is most of the job.
             </p>
-            <ul class="area-links">
+
+            <ul class="areas-dark">
                 <li><a href="vancouver-backflow-testing/">Vancouver</a></li>
                 <li><a href="richmond-backflow-testing/">Richmond</a></li>
                 <li><a href="surrey-backflow-testing/">Surrey</a></li>
@@ -495,153 +531,36 @@
                 <li><span>Tsawwassen</span></li>
                 <li><span>Ladner</span></li>
             </ul>
-            <p class="area-links__more">
-                <a class="link-arrow" href="service-areas.html">More about our service areas</a>
+
+            <p class="areas-note">
+                We cover the wider Metro Vancouver area as well. If your property is nearby
+                but not listed, call or text
+                <a href="tel:+16042833804" data-track="phone-click" data-track-location="areas">604-283-3804</a>
+                and we will tell you straight away whether we can attend.
             </p>
         </div>
     </section>
 
-    <!-- ===== Booking ================================================== -->
-    <section class="section section--mist" id="book" aria-labelledby="book-heading">
-        <div class="wrap layout-split">
-            <div class="layout-split__main">
+    <!-- ===== Final CTA ================================================ -->
+    <section class="final-cta" aria-labelledby="cta-heading">
+        <div class="wrap final-cta__inner">
+            <div>
                 <p class="eyebrow">Book a Test</p>
-                <h2 class="section__title" id="book-heading">We test it. We document it. We submit it.</h2>
-                <p class="section__intro">
-                    Send us the property and we will confirm pricing before any work begins.
-                    Prefer to talk? Call or text
-                    <a href="tel:+16042833804" data-track="phone-click" data-track-location="book-section">604-283-3804</a>.
+                <h2 id="cta-heading">Backflow Test Due?</h2>
+                <p>
+                    Stay compliant and keep your water system protected. Send us the property
+                    and we will confirm pricing before any work begins.
                 </p>
-
-                <!-- @partial bookingForm -->
-                <form class="booking-form" action="https://formspree.io/f/mwpqwovj" method="POST" enctype="multipart/form-data" novalidate>
-
-                    <div class="booking-form__grid">
-                        <div class="field">
-                            <label for="bf-name">Name <span class="req" aria-hidden="true">*</span></label>
-                            <input type="text" id="bf-name" name="name" autocomplete="name" required>
-                            <p class="field__error" id="bf-name-error" hidden></p>
-                        </div>
-
-                        <div class="field">
-                            <label for="bf-company">Company / strata / property name <span class="field__opt">Optional</span></label>
-                            <input type="text" id="bf-company" name="company" autocomplete="organization">
-                        </div>
-
-                        <div class="field">
-                            <label for="bf-phone">Phone <span class="req" aria-hidden="true">*</span></label>
-                            <input type="tel" id="bf-phone" name="phone" inputmode="tel" autocomplete="tel" placeholder="604-555-0142" required>
-                            <p class="field__error" id="bf-phone-error" hidden></p>
-                        </div>
-
-                        <div class="field">
-                            <label for="bf-email">Email <span class="req" aria-hidden="true">*</span></label>
-                            <input type="email" id="bf-email" name="_replyto" inputmode="email" autocomplete="email" required>
-                            <p class="field__error" id="bf-email-error" hidden></p>
-                        </div>
-
-                        <div class="field field--wide">
-                            <label for="bf-address">Property address <span class="req" aria-hidden="true">*</span></label>
-                            <input type="text" id="bf-address" name="address" autocomplete="street-address" placeholder="Street address of the property to be tested" required>
-                            <p class="field__error" id="bf-address-error" hidden></p>
-                        </div>
-
-                        <div class="field">
-                            <label for="bf-municipality">Municipality <span class="req" aria-hidden="true">*</span></label>
-                            <select id="bf-municipality" name="municipality" required>
-                                <option value="">Select…</option>
-                                <option value="Vancouver">Vancouver</option>
-                                <option value="Richmond">Richmond</option>
-                                <option value="Surrey">Surrey</option>
-                                <option value="Delta">Delta</option>
-                                <option value="Burnaby">Burnaby</option>
-                                <option value="New Westminster">New Westminster</option>
-                                <option value="Coquitlam">Coquitlam</option>
-                                <option value="Port Coquitlam">Port Coquitlam</option>
-                                <option value="Port Moody">Port Moody</option>
-                                <option value="Langley">Langley</option>
-                                <option value="North Vancouver">North Vancouver</option>
-                                <option value="West Vancouver">West Vancouver</option>
-                                <option value="Tsawwassen">Tsawwassen</option>
-                                <option value="Ladner">Ladner</option>
-                                <option value="Other">Other / not listed</option>
-                            </select>
-                            <p class="field__error" id="bf-municipality-error" hidden></p>
-                        </div>
-
-                        <div class="field">
-                            <label for="bf-devices">Number of backflow devices</label>
-                            <select id="bf-devices" name="devices">
-                                <option value="">Select…</option>
-                                <option value="1">1</option>
-                                <option value="2–5">2–5</option>
-                                <option value="6–10">6–10</option>
-                                <option value="10+">10+</option>
-                                <option value="Not sure">Not sure</option>
-                            </select>
-                        </div>
-
-                        <div class="field field--wide">
-                            <label for="bf-service">Service needed</label>
-                            <select id="bf-service" name="service">
-                                <option value="">Select…</option>
-                                <option value="Annual backflow test">Annual backflow test</option>
-                                <option value="Failed device / repair">Failed device / repair</option>
-                                <option value="Retest">Retest</option>
-                                <option value="Multi-property testing">Multi-property testing</option>
-                                <option value="Not sure">Not sure</option>
-                            </select>
-                        </div>
-
-                        <div class="field field--wide">
-                            <label for="bf-upload">Photo of the device, municipal notice, or previous report <span class="field__opt">Optional</span></label>
-                            <input type="file" id="bf-upload" name="upload" accept=".jpg,.jpeg,.png,.pdf,image/jpeg,image/png,application/pdf">
-                            <p class="field__hint">JPG, PNG, or PDF up to 10&nbsp;MB. A photo of the device or your notice is usually enough for us to quote accurately.</p>
-                            <p class="field__error" id="bf-upload-error" hidden></p>
-                        </div>
-
-                        <div class="field field--wide">
-                            <label for="bf-notes">Additional notes <span class="field__opt">Optional</span></label>
-                            <textarea id="bf-notes" name="notes" rows="4" placeholder="Access details, where the device is located, deadlines, or anything else worth knowing."></textarea>
-                        </div>
-                    </div>
-
-                    <!-- Spam trap. Hidden from people, tempting to bots. -->
-                    <div class="hp" aria-hidden="true">
-                        <label for="bf-gotcha">Leave this field empty</label>
-                        <input type="text" id="bf-gotcha" name="_gotcha" tabindex="-1" autocomplete="off">
-                    </div>
-
-                    <input type="hidden" name="_subject" value="Backflow booking request — eagleeyebackflow.ca">
-                    <!-- Redirect target for a submission made without JavaScript. -->
-                    <input type="hidden" name="_next" value="https://eagleeyebackflow.ca/thank-you.html">
-
-                    <div class="booking-form__status" role="status" aria-live="polite" tabindex="-1"></div>
-
-                    <div class="booking-form__actions">
-                        <button type="submit" class="btn btn--primary btn--lg" data-track="form-submit" data-track-location="booking-form">
-                            Book My Backflow Test
-                        </button>
-                        <p class="booking-form__aside">
-                            Prefer to talk it through? Call or text
-                            <a href="tel:+16042833804" data-track="phone-click" data-track-location="booking-form">604-283-3804</a>.
-                        </p>
-                    </div>
-                </form>
-                <!-- @endpartial -->
+                <p class="final-cta__email">
+                    <a href="mailto:eagle.eye.backflow@gmail.com" data-track="email-click" data-track-location="final-cta">eagle.eye.backflow@gmail.com</a>
+                </p>
             </div>
-
-            <aside class="layout-split__aside">
-                <div class="panel panel--quiet">
-                    <h2 class="panel__title">Talk to us directly</h2>
-                    <ul class="ticklist">
-                        <li><a href="tel:+16042833804" data-track="phone-click" data-track-location="book-aside">604-283-3804</a> — call or text</li>
-                        <li><a href="mailto:eagle.eye.backflow@gmail.com" data-track="email-click" data-track-location="book-aside">eagle.eye.backflow@gmail.com</a></li>
-                        <li>Greater Vancouver and surrounding communities</li>
-                    </ul>
-                    <p class="panel__note">No payment until the work is complete.</p>
-                </div>
-            </aside>
+            <div class="cta-row">
+                <a class="btn btn--primary btn--lg" href="contact.html"
+                   data-track="cta-click" data-track-location="final-cta">Book My Backflow Test</a>
+                <a class="btn btn--ghost btn--lg" href="tel:+16042833804"
+                   data-track="phone-click" data-track-location="final-cta">Call / Text 604-283-3804</a>
+            </div>
         </div>
     </section>
 
@@ -676,7 +595,7 @@
                     <li><a href="index.html#services">Backflow Repair</a></li>
                     <li><a href="index.html#services">Retesting &amp; Certification</a></li>
                     <li><a href="index.html#services">Report Submission</a></li>
-                    <li><a href="index.html#property-managers">Multi-Property Testing</a></li>
+                    <li><a href="contact.html?service=multi">Multi-Property Testing</a></li>
                 </ul>
             </nav>
 
