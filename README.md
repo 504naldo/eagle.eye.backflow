@@ -188,15 +188,23 @@ Above 1200px the image runs out to the viewport edge instead of stopping at the
 content column, which is what gives it presence. `.hero` is `overflow: hidden`,
 so that can never produce a horizontal scrollbar.
 
-> **The embossed markings on this device are garbled rather than real
-> lettering**, which is characteristic of a generated image. A backflow
-> professional looking closely would notice. The brief asked that equipment read
-> as technically credible, so it is called out here rather than left to be
-> found.
->
-> The alternative is in git history: commit `ff4b137` carries a **real FEBCO
+The device arrived with **garbled embossed markings** — letter-shaped forms that
+spell nothing, characteristic of a generated image. Those have been retouched
+out: the affected areas are rebuilt by interpolating inward from the clean metal
+on their own borders, so the surrounding shading carries through and a little
+grain is added back to keep the surface reading as cast brass. The body is now
+plain and unmarked.
+
+Nothing was painted in to replace them. Inventing manufacturer markings would
+mean fabricating equipment identification and implying a brand that did not make
+this device, which is worse than no markings at all.
+
+The retouch is baked into the shipped image rather than applied at build time,
+so `node build.mjs` does not need to redo it.
+
+> A real alternative is in git history: commit `ff4b137` carries a **real FEBCO
 > 825Y** photographed for the company flyer, colour-graded onto the dark ground
-> with its markings intact. To go back to it:
+> with its genuine markings intact. To go back to it:
 >
 > ```sh
 > git checkout ff4b137 -- images/hero-backflow-640.avif images/hero-backflow-640.webp \
